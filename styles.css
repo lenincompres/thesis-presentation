@@ -1,0 +1,740 @@
+:root {
+  /* Pastel Palette */
+  --primary: #A0C4FF;
+  /* Soft Blue */
+  --primary-light: #EAF2FF;
+  /* Lighter Blue */
+  --secondary: #F1F1F1;
+  /* Light Gray */
+  --text: #000000;
+  /* Dark Gray -> Black for High Contrast */
+  --text-light: #333333;
+  /* Medium Gray -> Darker Gray for High Contrast */
+  --break: #FFADAD;
+  /* Soft Red */
+  --break-light: #FFE5E5;
+  /* Lighter Red */
+  --border: #EAEAEA;
+  /* Very Light Gray */
+  --white: #FFFFFF;
+  --bg-body: #FDFDFF;
+  /* Very Light Gray/Off-white */
+  --banner-text: #000000;
+  /* Muted brown -> Black for High Contrast */
+  --border-radius-large: 20px;
+  /* Super round corners */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Added Nunito */
+  color: var(--text);
+  /* Updated background with a gradient */
+  background: linear-gradient(135deg,
+      #A0C4FF,
+      /* Soft Blue */
+      #BDECB6,
+      /* Light Green */
+      #FFFDBB,
+      /* Light Yellow */
+      #FFDAC1,
+      /* Peach */
+      #FFADAD,
+      /* Soft Red */
+      #D7B0FF
+      /* Light Purple */
+    );
+  background-size: 600% 600%;
+  /* Make gradient larger for smoother transition */
+  animation: gradientBG 15s ease infinite;
+  /* Animate the gradient */
+  /* Removed gradient background - will be covered */
+  background-color: var(--bg-body);
+  line-height: 1.5;
+  padding: 0;
+  /* Remove body padding, handle spacing with banner/container */
+  /* Add padding-top to push content below the initially rendered banner */
+  /* This value might need adjustment depending on the banner image aspect ratio */
+  /* padding-top: 60vh; REMOVED */
+}
+
+.site-banner {
+  color: var(--banner-text);
+  padding: 0;
+  /* REMOVED padding */
+  line-height: 0;
+  /* Fixed Full Viewport Banner */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* height: 100vh; REMOVED */
+  height: 100vh;
+  /* RESTORED */
+  z-index: 1;
+  /* background-color: #000; CHANGED Fallback color if image fails */
+  background-color: #f9f8f2;
+  /* Set desired background */
+  transition: filter 0.3s ease;
+  /* Add transition for smooth blur effect */
+}
+
+.site-banner.blurred {
+  filter: blur(8px);
+  /* Apply blur effect when class is added */
+}
+
+.site-banner img {
+  display: block;
+  /* Ensure image takes full width and removes bottom space */
+  width: 100%;
+  /* Already set inline, but good to have here */
+  /* height: 100%; REMOVED */
+  height: 100%;
+  /* RESTORED */
+  /* object-fit: cover; CHANGED Cover the area, cropping if needed */
+  object-fit: contain;
+  /* Contain image to show full image + background */
+}
+
+/* Style for the scroll-down button on the banner */
+.scroll-down-button {
+  position: absolute;
+  /* Position relative to the fixed banner */
+  top: 85%;
+  /* Position lower part of the banner */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  /* Above banner image, below nav */
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-large);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(3px);
+}
+
+.scroll-down-button:hover {
+  background-color: var(--white);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  padding: 1rem;
+}
+
+/* Add animation container for rectangles */
+.nav-animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+  overflow: visible;
+}
+
+/* Rectangle animation styles */
+.nav-rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rectangleFlow 8s linear infinite;
+  opacity: 0.8;
+  transform: translateY(0);
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.nav-rectangle img {
+  width: 200%;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  display: block;
+  transform: rotate(-90deg);
+}
+
+@keyframes rectangleFlow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0.8;
+  }
+}
+
+.site-nav>a {
+  cursor: pointer;
+  color: var(--text);
+  /* Changed from --primary */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: block;
+  /* Make links block-level for easier spacing */
+  margin-bottom: 0.5rem;
+  /* Space between links */
+  padding: 0.4rem 0.8rem;
+  /* Padding inside link */
+  background-color: rgba(255, 255, 255, 0.85);
+  /* Updated Semi-transparent background */
+  border-radius: var(--border-radius-large);
+  /* Use variable for consistent rounding */
+  backdrop-filter: blur(3px);
+  /* Frosted glass effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-nav a.livestream-link {
+  background: linear-gradient(135deg,
+      rgba(255, 182, 193, 0.2),
+      /* Pastel Pink */
+      rgba(173, 216, 230, 0.2),
+      /* Pastel Blue */
+      rgba(144, 238, 144, 0.2),
+      /* Pastel Green */
+      rgba(255, 218, 185, 0.2),
+      /* Pastel Peach */
+      rgba(221, 160, 221, 0.2)
+      /* Pastel Purple */
+    );
+  background-size: 400% 400%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.site-nav a:hover {
+  color: var(--text);
+  background-color: var(--white);
+  /* Use solid white on hover */
+}
+
+.container {
+  max-width: 900px;
+  /* Reduced width */
+  /* margin: 100vh auto 2rem; CHANGED */
+  /* margin: 2rem auto 2rem; CHANGED Set top margin relative to body padding */
+  margin: 100vh auto 2rem;
+  /* RESTORED Start below banner */
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius-large);
+  /* Use variable */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  /* Soft shadow */
+  position: relative;
+  /* Needed for z-index stacking */
+  z-index: 10;
+  /* Above banner, below nav */
+}
+
+h1 {
+  font-size: 1.8rem;
+  /* Slightly smaller */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  text-align: center;
+  /* Center title */
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tab-button {
+  padding: 0.75rem 1.25rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-large);
+  /* Use variable */
+  font-weight: 600;
+  /* Bolder */
+  font-size: 0.9rem;
+  /* Slightly smaller */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text);
+}
+
+.tab-button:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--text);
+  /* Changed from --primary */
+}
+
+.tab-button.active {
+  background-color: var(--primary);
+  color: var(--text);
+  /* Changed from var(--white) to var(--text) for higher contrast */
+  border-color: var(--primary);
+  font-weight: 700;
+  /* Make active text bolder for even better contrast */
+}
+
+/* Add specific colors for each day */
+.tab-button[data-day="monday"] {
+  --day-color: #FFB5E8;
+  /* Pastel Pink */
+}
+
+.tab-button[data-day="tuesday"] {
+  --day-color: #B5DEFF;
+  /* Pastel Blue */
+}
+
+.tab-button[data-day="wednesday"] {
+  --day-color: #BFFCC6;
+  /* Pastel Green */
+}
+
+.tab-button[data-day="thursday"] {
+  --day-color: #FFC9DE;
+  /* Pastel Rose */
+}
+
+.tab-button[data-day="friday"] {
+  --day-color: #D5AAFF;
+  /* Pastel Purple */
+}
+
+.tab-button:hover {
+  background-color: var(--day-color);
+  border-color: var(--day-color);
+  color: var(--text);
+}
+
+.tab-button.active {
+  background-color: var(--day-color);
+  color: var(--text);
+  /* Changed from var(--white) to var(--text) for higher contrast */
+  border-color: var(--day-color);
+  font-weight: 700;
+  /* Make active text bolder for even better contrast */
+}
+
+.schedule {
+  display: none;
+}
+
+.schedule.visible {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.timeline {
+  position: relative;
+}
+
+.time-labels {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 60px;
+  background-color: var(--white);
+  z-index: 10;
+  padding-bottom: 0.5rem;
+}
+
+.time-label {
+  flex: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.slots {
+  position: relative;
+  padding-top: 1rem;
+  max-width: 95%;
+  /* Constrain slots width slightly within container */
+  margin: 0 auto;
+  /* Center the slots area */
+}
+
+.time-slot {
+  display: flex;
+  margin-bottom: 1.2rem;
+  /* Increased space to prevent overlap */
+  height: 3.2rem;
+  /* Slightly shorter */
+  position: relative;
+  align-items: center;
+  /* Align items vertically */
+}
+
+.time {
+  width: 6em;
+  /* Slightly narrower time */
+  font-size: 0.9rem;
+  /* Increased from 0.8rem */
+  color: var(--text);
+  /* Changed from --text-light to --text for better contrast */
+  font-weight: 600;
+  /* Increased from 500 */
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  /* Right align time */
+  padding-right: 0.75rem;
+  /* Space between time and slot */
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Added subtle background */
+  padding: 0.2rem 0.5rem;
+  /* Added padding */
+  border-radius: 4px;
+  /* Added rounded corners */
+  margin-right: 0.5rem;
+  /* Added spacing */
+}
+
+.slot-content {
+  flex: 1;
+  background-color: #fff3;
+  border: none;
+  /* Remove base border */
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  /* Lighter top */
+  border-radius: var(--border-radius-large);
+  /* Use variable */
+  padding: 0.6rem 0.9rem;
+  /* Adjusted padding */
+  font-size: 0.9rem;
+  /* Adjusted font size */
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-width: 0;
+  /* Allow shrinking */
+}
+
+.slot-content:hover {
+  /* border-color: var(--primary); Keep base hover border */
+  border-color: var(--text-light);
+  /* Use a darker neutral border on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
+}
+
+/* 3D Border Effect for Slot Content (Students & Breaks) */
+.student-slot .slot-content,
+.break-slot .slot-content {
+  border: none;
+  /* Remove base border */
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  /* Lighter top */
+  border-radius: var(--border-radius-large);
+  /* Use variable */
+  padding: 0.6rem 0.9rem;
+  /* Adjusted padding */
+  font-size: 0.9rem;
+  /* Adjusted font size */
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-width: 0;
+  /* Allow shrinking */
+}
+
+.empty-slot .slot-content {
+  background-color: var(--bg-body);
+  /* Use body bg for empty */
+  border: 1px dashed var(--border);
+  color: var(--text-light);
+  flex-shrink: 0;
+  /* Prevent shrinking */
+}
+
+.break-slot .slot-content {
+  background-color: var(--break-light);
+  border-color: var(--break);
+  color: var(--text);
+  /* Changed from --break */
+  font-weight: 600;
+}
+
+.student-slot .student-name {
+  font-weight: 600;
+  /* Bolder names */
+  white-space: nowrap;
+  /* Prevent wrapping */
+  overflow: hidden;
+  /* Hide overflow */
+  text-overflow: ellipsis;
+  /* Add ellipsis */
+}
+
+.student-slot .slot-number {
+  background-color: #fff8;
+  color: black;
+  border-radius: 50%;
+  width: 22px;
+  /* Adjusted size */
+  height: 22px;
+  /* Adjusted size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  /* Adjusted size */
+  margin-right: 0.6rem;
+  /* Adjusted margin */
+  flex-shrink: 0;
+  /* Prevent shrinking */
+  /* 3D Border Effect for Slot Number */
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  /* Lighter top */
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  /* Lighter left */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* Darker bottom */
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  /* Darker right */
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  /* Subtle drop shadow */
+  /* Ensure text contrasts with dynamic background */
+  /* color: var(--white); /* Set dynamically in JS now */
+  /* background-color: var(--primary); /* Set dynamically in JS now */
+}
+
+.legend {
+  position: relative;
+  flex-direction: column;
+  width: fit-content;
+  max-height: 34em;
+  overflow-y: auto;
+  margin: 2rem;
+  padding: 1rem;
+  left: 7em;
+  top: -8em;
+  z-index: 1000;
+}
+
+.legend-item {
+  cursor: pointer;
+  padding: 0.5em 1rem;
+  margin: 0.25rem 0;
+  border-radius: var(--border-radius-large);
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.consolidated-empty-slot .slot-content {
+  background-color: var(--secondary);
+  /* Use secondary gray */
+  border: 1px dashed var(--border);
+  color: var(--text-light);
+  font-style: italic;
+  height: auto;
+  /* Allow height to adjust */
+  min-height: 3.2rem;
+  /* Match new slot height */
+  padding: 0.8rem 1rem;
+  /* Adjusted padding */
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-large);
+  /* Use variable */
+}
+
+.consolidated-empty-slot .time {
+  display: none;
+  /* Hide the individual time for consolidated slots */
+}
+
+/* Section Styling */
+.schedule-section {
+  border: 1px solid var(--border);
+  /* Folder-like corners: Rounded top, square bottom */
+  border-radius: 10px;
+  /* Rounded all corners */
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  position: relative;
+  /* Needed for absolute positioning of the tab */
+  padding-top: 1rem;
+  /* Adjust padding-top if needed based on tab */
+  margin-top: 30px;
+  /* Increased margin-top for more tab clearance */
+  /* Remove background-clip if it causes issues */
+  /* background-clip: padding-box; */
+}
+
+.section-department-tab {
+  position: absolute;
+  top: -25px;
+  left: 15px;
+  background-color: inherit;
+  color: var(--text);
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.section-department-tab:hover {
+  text-decoration: underline;
+}
+
+.section-content {
+  /* Hidden by default - using max-height for transition */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  opacity: 0;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+}
+
+.schedule-section.expanded .section-content {
+  /* Adjust max-height as needed, should be larger than expected content */
+  max-height: 2000px;
+  /* Increased value to accommodate more content */
+  opacity: 1;
+}
+
+.section-instructor {
+  font-weight: 600;
+  color: var(--text);
+  /* Ensure contrast */
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  /* Slightly smaller */
+  margin-top: 0rem;
+  /* Remove space below the tab */
+  /* Mix blend mode can sometimes help text contrast on varied backgrounds, but can be complex */
+  /* mix-blend-mode: difference; /* Experiment if needed */
+}
+
+/* Remove section-color-* classes as we'll use inline styles */
+/*.schedule-section.section-color-1 { ... } etc. */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Added animation for the background gradient */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* === Mobile Menu Styles (below 850px) === */
+#menu-toggle,
+#close-menu {
+  display: none;
+  /* Hide buttons by default */
+  position: fixed;
+  /* Keep them in place */
+  z-index: 105;
+  /* Above most other elements */
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 38px;
+  /* Center icon vertically */
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(3px);
+  color: var(--text);
+}
+
+#menu-toggle {
+  top: 1rem;
+  left: 1rem;
+}
+
+#close-menu {
+  top: 1rem;
+  right: 1rem;
+  /* Positioned relative to the sliding menu */
+  /* Override fixed positioning when inside the column */
+  position: absolute;
+}

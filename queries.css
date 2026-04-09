@@ -1,0 +1,332 @@
+
+
+/* Remove section-color-* classes as we'll use inline styles */
+/*.schedule-section.section-color-1 { ... } etc. */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Added animation for the background gradient */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .time {
+    width: 60px;
+    font-size: 0.75rem;
+  }
+
+  .slot-content {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .student-slot .slot-number {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 1229px) {
+  body {
+    padding-top: 0;
+    /* Remove space reserved for fixed banner */
+    overflow: visible;
+    /* Changed from hidden to visible to allow scrolling */
+  }
+
+  /* Hide banner image in container on mobile */
+  .container img {
+    display: none;
+  }
+
+  .layout-wrapper {
+    display: flex;
+    height: 100vh;
+    /* Make wrapper fill viewport height */
+    overflow: visible;
+    /* Changed from hidden to visible */
+  }
+
+  .left-column {
+    width: 280px;
+    /* Fixed width for left column */
+    flex-shrink: 0;
+    padding: 1rem;
+    height: 100vh;
+    /* Fill viewport height */
+    overflow-y: auto;
+    /* Changed from hidden to auto to allow scrolling */
+    position: sticky;
+    /* Keep left column visible */
+    top: 0;
+    background-color: #f9f8f2;
+    /* Updated background color */
+    border-right: 1px solid var(--border);
+    position: relative;
+    /* For animation container positioning */
+  }
+
+  .right-column {
+    flex-grow: 1;
+    /* Take remaining width */
+    height: 100vh;
+    /* Fill viewport height */
+    overflow-y: auto;
+    /* Allow right column (schedule) to scroll */
+    padding: 1.5rem 2rem;
+    /* Add padding for content */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+  }
+
+  .site-nav {
+    position: static;
+    /* Override fixed positioning */
+    padding: 0;
+    /* Remove original padding */
+    position: relative;
+    /* For z-index stacking */
+    z-index: 1;
+    /* Place above animation */
+  }
+
+  .nav-animation-container {
+    display: block;
+    /* Show animation on mobile */
+    position: fixed;
+    /* Fixed to viewport */
+    top: 0;
+    left: 0;
+    width: 280px;
+    /* Match left column width */
+    height: 100vh;
+    /* Full viewport height */
+    z-index: 0;
+    /* Place behind content */
+  }
+
+  .site-nav a {
+    /* Styles mostly okay, maybe adjust margin */
+    margin-bottom: 0.75rem;
+    position: relative;
+    /* Ensure links appear above animation */
+    z-index: 1;
+  }
+
+  /* Adjust Banner for Sidebar */
+  .site-banner-placeholder .site-banner {
+    /* Styles are set by JS, but ensure no conflicting CSS */
+    position: static !important;
+    /* Ensure it's not fixed */
+    height: auto !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+    /* Ensure space */
+    z-index: auto;
+    /* Reset z-index */
+  }
+
+  .site-banner img {
+    object-fit: contain;
+    /* Ensure full image is visible */
+    max-height: 300px;
+    /* Limit banner height in sidebar */
+  }
+
+  .scroll-down-button {
+    display: none !important;
+    /* Hide button moved by JS, but CSS backup */
+  }
+
+  /* Adjust Container for Right Column */
+  .container {
+    margin: 0 auto;
+    /* Remove top margin, keep centered horizontally if needed */
+    max-width: 100%;
+    /* Allow container to fill right column */
+    padding: 1rem;
+    /* Adjust padding if needed */
+    height: auto;
+    /* Let content define height */
+    box-shadow: none;
+    /* Remove shadow if desired */
+    border-radius: var(--border-radius-large);
+    /* Keep rounding */
+    /* Ensure container background is distinct from right-column padding area */
+    background-color: var(--white);
+    position: relative;
+    /* Reset z-index context if needed */
+    z-index: auto;
+  }
+
+  /* Adjust sticky time labels for new scrolling context */
+  .time-labels {
+    top: 0;
+    /* Stick to the top of the scrolling right column */
+    z-index: 100;
+    /* Ensure it's above schedule content */
+  }
+
+  /* Adjust section tab positioning relative to scrolling container */
+  .section-department-tab {
+    /* Might need adjustment if sticking behavior changes */
+    z-index: 10;
+    /* Ensure above section content but below time labels */
+  }
+}
+
+/* === Mobile Menu Styles (below 850px) === */
+#menu-toggle,
+#close-menu {
+  display: none;
+  /* Hide buttons by default */
+  position: fixed;
+  /* Keep them in place */
+  z-index: 105;
+  /* Above most other elements */
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 38px;
+  /* Center icon vertically */
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(3px);
+  color: var(--text);
+}
+
+#menu-toggle {
+  top: 1rem;
+  left: 1rem;
+}
+
+#close-menu {
+  top: 1rem;
+  right: 1rem;
+  /* Positioned relative to the sliding menu */
+  /* Override fixed positioning when inside the column */
+  position: absolute;
+}
+
+@media (max-width: 849px) {
+  .layout-wrapper {
+    /* On mobile, layout-wrapper doesn't need flex */
+    display: block;
+  }
+
+  #menu-toggle {
+    display: block;
+    /* Show hamburger on mobile */
+  }
+
+  .left-column {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px;
+    /* Or your preferred width */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 102;
+    /* Above content, below buttons */
+    background-color: #f9f8f2;
+    /* Updated background color */
+    border-right: 1px solid var(--border);
+    overflow: hidden;
+    /* Prevent overflow */
+    /* overflow-y: auto; Allow vertical scrolling for content */
+    padding-top: 4rem;
+    /* Space for close button */
+  }
+
+  .left-column.open {
+    transform: translateX(0);
+  }
+
+  .left-column.open #close-menu {
+    display: block;
+    /* Show close button only when menu is open */
+  }
+
+  .right-column {
+    width: 100%;
+    height: auto;
+    /* Allow content to determine height */
+    overflow-y: visible;
+    /* Reset overflow */
+    padding: 1rem;
+    /* Adjust padding */
+    padding-top: 4rem;
+    /* Add padding to avoid content going under fixed menu toggle */
+  }
+
+  .right-column #menu-toggle {
+    /* Already positioned fixed, no extra style needed here */
+  }
+
+  .container {
+    margin-top: 0;
+    /* Remove margin pushed by banner */
+    padding-top: 1rem;
+    /* Adjust if needed */
+  }
+
+  /* Hide banner elements that don't make sense in sidebar */
+  .left-column .site-banner .scroll-down-button {
+    display: none !important;
+  }
+
+  /* Ensure banner image fits */
+  .left-column .site-banner img {
+    max-height: 200px;
+    /* Further reduce height */
+    object-fit: contain;
+  }
+
+  /* Adjust nav links if needed */
+  .left-column .site-nav {
+    margin-top: 1rem;
+    /* Add space below close button */
+  }
+}
+
+/* === End Mobile Menu Styles === */
+
+@media (min-width: 1230px) {
+  .nav-animation-container {
+    display: none;
+    /* Hide the animation container on wide screens */
+  }
+}

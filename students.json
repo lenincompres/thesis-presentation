@@ -1,0 +1,3407 @@
+{
+  "list": [
+    {
+      "NetID": "nk1204",
+      "Name": "Nikolai Kozak",
+      "Id": 325,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "dk5001",
+      "Name": "DJ Kim",
+      "Id": 326,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "tj2457",
+      "Name": "Taigen Jin",
+      "Id": 327,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "yj3059",
+      "Name": "Ivy Jiang",
+      "Id": 328,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "wj644",
+      "Name": "Vivian Jia",
+      "Id": 329,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "dai759",
+      "Name": "Dean Issacharoff",
+      "Id": 330,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "vl1201",
+      "Name": "Vedang Lambe",
+      "Id": 331,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "rk5014",
+      "Name": "Rajeshwari Ranjeet Kotwal",
+      "Id": 332,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "jk6341",
+      "Name": "Julia Ming Yuet Kan",
+      "Id": 333,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "jj4123",
+      "Name": "Justin Johnson",
+      "Id": 334,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "qj351",
+      "Name": "Qihan Jiang",
+      "Id": 335,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "pj852",
+      "Name": "Prisha Jain",
+      "Id": 336,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "jh9433",
+      "Name": "Fiona Huang",
+      "Id": 337,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "cl7743",
+      "Name": "Ping Lin",
+      "Id": 338,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 6,
+      "nc_w3s____Advisors_id3": 6,
+      "order": null,
+      "Advisor": {
+        "Id": 6,
+        "Name": "Kari"
+      },
+      "Block": {
+        "Id": 6,
+        "Name": "Kari"
+      }
+    },
+    {
+      "NetID": "cap966",
+      "Name": "Callie Page",
+      "Id": 339,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "kp3551",
+      "Name": "Kalinda Panholzer",
+      "Id": 340,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "ao2642",
+      "Name": "Alanna Okun",
+      "Id": 341,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "srn934",
+      "Name": "Surya Narreddi",
+      "Id": 342,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "js1439",
+      "Name": "Jinhee Shim",
+      "Id": 343,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "hs5584",
+      "Name": "Rachel Shin",
+      "Id": 344,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "ncr750",
+      "Name": "Nasif Rincon Romaite",
+      "Id": 345,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "sr7667",
+      "Name": "Shri Ranjani Ramakrishnan",
+      "Id": 346,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "ihp1",
+      "Name": "Ian Pelton",
+      "Id": 347,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "jp7469",
+      "Name": "Jiyou Park",
+      "Id": 348,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "smp793",
+      "Name": "Sofia Pace",
+      "Id": 349,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "do772",
+      "Name": "Audrey Oh",
+      "Id": 350,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "hs5574",
+      "Name": "Sky Seo",
+      "Id": 351,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "rmr949",
+      "Name": "Ryan Rotella",
+      "Id": 352,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "lhp892",
+      "Name": "Luna Park",
+      "Id": 353,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 7,
+      "nc_w3s____Advisors_id3": 7,
+      "order": null,
+      "Advisor": {
+        "Id": 7,
+        "Name": "Luisa"
+      },
+      "Block": {
+        "Id": 7,
+        "Name": "Luisa"
+      }
+    },
+    {
+      "NetID": "nh2768",
+      "Name": "Naodan Hu",
+      "Id": 354,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "pkh620",
+      "Name": "Paul Hanna",
+      "Id": 355,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "sh8005",
+      "Name": "Suzanne Heintz",
+      "Id": 356,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "jg8116",
+      "Name": "Jakyoung Goo",
+      "Id": 357,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "fg1059",
+      "Name": "Fabrizio Guccione",
+      "Id": 358,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "kd3262",
+      "Name": "Keyi Ding",
+      "Id": 359,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "tf2103",
+      "Name": "Laurel Fang",
+      "Id": 360,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "nbd244",
+      "Name": "Noah Dorazio",
+      "Id": 361,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "syh394",
+      "Name": "Queenie Hsiao",
+      "Id": 362,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "xh2812",
+      "Name": "Xiaoxu Han",
+      "Id": 363,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "kjh467",
+      "Name": "Kyung Jin Han",
+      "Id": 364,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "jd6021",
+      "Name": "Augusta Ding",
+      "Id": 365,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "bf2383",
+      "Name": "Billy Fadhila",
+      "Id": 366,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "tf2380",
+      "Name": "William Fang",
+      "Id": 367,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 11,
+      "nc_w3s____Advisors_id3": 11,
+      "order": null,
+      "Advisor": {
+        "Id": 11,
+        "Name": "Simone"
+      },
+      "Block": {
+        "Id": 11,
+        "Name": "Simone"
+      }
+    },
+    {
+      "NetID": "yc4333",
+      "Name": "Sam Wu",
+      "Id": 368,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "mjc908",
+      "Name": "Michael Culleton",
+      "Id": 369,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "sec889",
+      "Name": "Sophia Collender",
+      "Id": 370,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "tc3902",
+      "Name": "Tim Chen",
+      "Id": 371,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "yc7304",
+      "Name": "Luna Chen",
+      "Id": 372,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "hb2905",
+      "Name": "Han Bao",
+      "Id": 373,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "sa8587",
+      "Name": "Sana Alimohamed",
+      "Id": 374,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "fya222",
+      "Name": "Fatma Alhashimi",
+      "Id": 375,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "oel224",
+      "Name": "Olivia Lee",
+      "Id": 376,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "yd3015",
+      "Name": "Yifan Deng",
+      "Id": 377,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "wc2771",
+      "Name": "Wonjung Choi",
+      "Id": 378,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "yc4351",
+      "Name": "Yifan Chen",
+      "Id": 379,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "tc4259",
+      "Name": "Trusha Chandan",
+      "Id": 380,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "pb2986",
+      "Name": "Praagya Bahuguna",
+      "Id": 381,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 10,
+      "nc_w3s____Advisors_id3": 10,
+      "order": null,
+      "Advisor": {
+        "Id": 10,
+        "Name": "Sharleen"
+      },
+      "Block": {
+        "Id": 10,
+        "Name": "Sharleen"
+      }
+    },
+    {
+      "NetID": "ym3317",
+      "Name": "Yafira Martinez",
+      "Id": 382,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "wm2142",
+      "Name": "Marven Ma",
+      "Id": 383,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "md6196",
+      "Name": "Inês Lucas",
+      "Id": 384,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "yl8688",
+      "Name": "Yuxin Li",
+      "Id": 385,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "dm6102",
+      "Name": "Duban Morales",
+      "Id": 386,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "rmm101",
+      "Name": "Robert Meares",
+      "Id": 387,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "mm1404",
+      "Name": "Meghna Mahadevan",
+      "Id": 388,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "jm1084",
+      "Name": "Jingbo Ma",
+      "Id": 389,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "hl5884",
+      "Name": "Helen Lin",
+      "Id": 390,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "aaj266",
+      "Name": "angela juarez",
+      "Id": 391,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "xl5458",
+      "Name": "Xueyu Li",
+      "Id": 392,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "nam101",
+      "Name": "Ender Minyard",
+      "Id": 393,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 9,
+      "nc_w3s____Advisors_id3": 9,
+      "order": null,
+      "Advisor": {
+        "Id": 9,
+        "Name": "Sarah"
+      },
+      "Block": {
+        "Id": 9,
+        "Name": "Sarah"
+      }
+    },
+    {
+      "NetID": "hy3018",
+      "Name": "Beverly Yip",
+      "Id": 394,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "yh5050",
+      "Name": "Yihe Huang",
+      "Id": 395,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "mc5859",
+      "Name": "Mark Chan",
+      "Id": 396,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "yz2262",
+      "Name": "MJ Zhou",
+      "Id": 397,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "zz1011",
+      "Name": "Zongshuai Zhang",
+      "Id": 398,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "yz1094",
+      "Name": "Yao Zhang",
+      "Id": 399,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": null,
+      "nc_w3s____Advisors_id3": null,
+      "order": null,
+      "Advisor": null,
+      "Block": null
+    },
+    {
+      "NetID": "jz3407",
+      "Name": "Jessie Zhai",
+      "Id": 400,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "yy5262",
+      "Name": "Jin Yi",
+      "Id": 401,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "yy4724",
+      "Name": "Yilin Ye",
+      "Id": 402,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "yc6622",
+      "Name": "Yian Chen",
+      "Id": 403,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "rz2289",
+      "Name": "Runqi Zou",
+      "Id": 404,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "hz2315",
+      "Name": "Haoren Zhong",
+      "Id": 405,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "yz1094",
+      "Name": "Shawn Zheng",
+      "Id": 406,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "jz6789",
+      "Name": "Junqi Zhang",
+      "Id": 407,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "ty2551",
+      "Name": "Tina Yu",
+      "Id": 408,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 13,
+      "nc_w3s____Advisors_id3": 13,
+      "order": null,
+      "Advisor": {
+        "Id": 13,
+        "Name": "Yuliya"
+      },
+      "Block": {
+        "Id": 13,
+        "Name": "Yuliya"
+      }
+    },
+    {
+      "NetID": "wpt201",
+      "Name": "Liam Treanor",
+      "Id": 409,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "et2687",
+      "Name": "Ege Tezcan",
+      "Id": 410,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "ga2592",
+      "Name": "Gelala Adali",
+      "Id": 411,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "bs4396",
+      "Name": "Bairui Su",
+      "Id": 412,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "sy4251",
+      "Name": "Seungyun Yang",
+      "Id": 413,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "jdx763",
+      "Name": "Julia Xu",
+      "Id": 414,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "bw2771",
+      "Name": "Bethany Wu",
+      "Id": 415,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "jw8868",
+      "Name": "Ray Wang",
+      "Id": 416,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "sv2884",
+      "Name": "Sai Ram Ved Vijapurapu",
+      "Id": 417,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "wt2301",
+      "Name": "Wei Liang Toh",
+      "Id": 418,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "bm2699",
+      "Name": "Beatrice Mai",
+      "Id": 419,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "qy992",
+      "Name": "Qiyun Yan",
+      "Id": 420,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "zx1900",
+      "Name": "William Xuan",
+      "Id": 421,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "mx2333",
+      "Name": "Michelle Xu",
+      "Id": 422,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "dkw871",
+      "Name": "Devan Wardrop-Saxton",
+      "Id": 423,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Thesis",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 12,
+      "nc_w3s____Advisors_id3": 12,
+      "order": null,
+      "Advisor": {
+        "Id": 12,
+        "Name": "Yeseul"
+      },
+      "Block": {
+        "Id": 12,
+        "Name": "Yeseul"
+      }
+    },
+    {
+      "NetID": "sl9964",
+      "Name": "Amy Liu",
+      "Id": 424,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "aj3744",
+      "Name": "Alyea Jaipal",
+      "Id": 425,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "csh790",
+      "Name": "Cate Hackett",
+      "Id": 426,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "af4502",
+      "Name": "Andrew Feng",
+      "Id": 427,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "kw3591",
+      "Name": "Kyle Wang",
+      "Id": 428,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "krs877",
+      "Name": "Reade Smith",
+      "Id": 429,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "ym2930",
+      "Name": "Angela Meng",
+      "Id": 430,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "bl3499",
+      "Name": "Graham Lyu",
+      "Id": 431,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "nk3167",
+      "Name": "Nilufer Kucukbatman",
+      "Id": 432,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "gh2304",
+      "Name": "Ga-Yeon Hwangbo",
+      "Id": 433,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "xf653",
+      "Name": "Naya Fu",
+      "Id": 434,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "ab1080",
+      "Name": "Anika Bajpai",
+      "Id": 435,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "jy4726",
+      "Name": "Jiaxin Yu",
+      "Id": 436,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "ys5322",
+      "Name": "Joy Song",
+      "Id": 437,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "as1538",
+      "Name": "Anshula Saha",
+      "Id": 438,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "am1233",
+      "Name": "Ashna Mali",
+      "Id": 439,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 3,
+      "nc_w3s____Advisors_id3": 3,
+      "order": null,
+      "Advisor": {
+        "Id": 3,
+        "Name": "Allison"
+      },
+      "Block": {
+        "Id": 3,
+        "Name": "Allison"
+      }
+    },
+    {
+      "NetID": "kl4387",
+      "Name": "Nicole Lin",
+      "Id": 440,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": "2026-04-08 23:26:36",
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "efk949",
+      "Name": "ellen kuwamoto",
+      "Id": 441,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "kac774",
+      "Name": "Kayley Chery",
+      "Id": 442,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "kja912",
+      "Name": "Kayla An",
+      "Id": 443,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "zw3421",
+      "Name": "Fiona Wang",
+      "Id": 444,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "rw3145",
+      "Name": "Ruohan Wang",
+      "Id": 445,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "ys5164",
+      "Name": "Sophia Sun",
+      "Id": 446,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "jzl723",
+      "Name": "Jane Liu",
+      "Id": 447,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "jl1399",
+      "Name": "Nina Li",
+      "Id": 448,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "ad7133",
+      "Name": "Annica Dong",
+      "Id": 449,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "jc1144",
+      "Name": "Jindi Chai",
+      "Id": 450,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "fx2084",
+      "Name": "Finnley Xuereb",
+      "Id": 451,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "yx2979",
+      "Name": "Yizhen Xiang",
+      "Id": 452,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "yw6458",
+      "Name": "Yilin Wang",
+      "Id": 453,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "zw3454",
+      "Name": "James Wang",
+      "Id": 454,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "ms1297",
+      "Name": "Lucia Shui",
+      "Id": 455,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 4,
+      "nc_w3s____Advisors_id3": 4,
+      "order": null,
+      "Advisor": {
+        "Id": 4,
+        "Name": "Blair"
+      },
+      "Block": {
+        "Id": 4,
+        "Name": "Blair"
+      }
+    },
+    {
+      "NetID": "yl8901",
+      "Name": "Toby Lu",
+      "Id": 456,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "cl7578",
+      "Name": "Ali Lin",
+      "Id": 457,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "jh8311",
+      "Name": "Rumik He",
+      "Id": 458,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "sd5135",
+      "Name": "Samay Dhawan",
+      "Id": 459,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "acc793",
+      "Name": "Andy Cabindol",
+      "Id": 460,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "esz792",
+      "Name": "Edward Zhou",
+      "Id": 461,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "jz5821",
+      "Name": "Zoey Zhang",
+      "Id": 462,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "sy3459",
+      "Name": "Rita Yu",
+      "Id": 463,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "dxl211",
+      "Name": "David Liu",
+      "Id": 464,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "dk4427",
+      "Name": "Dan Klin",
+      "Id": 465,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "kg3171",
+      "Name": "Chloe Guo",
+      "Id": 466,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "lwe280",
+      "Name": "Laila Elsalmi",
+      "Id": 467,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "jc1167",
+      "Name": "JiaYing Chen",
+      "Id": 468,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "yz8676",
+      "Name": "Claire Zhao",
+      "Id": 469,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "dw2949",
+      "Name": "Delaney Wong",
+      "Id": 470,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "zw3404",
+      "Name": "Sabrina Wang",
+      "Id": 471,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 5,
+      "nc_w3s____Advisors_id3": 5,
+      "order": null,
+      "Advisor": {
+        "Id": 5,
+        "Name": "Christina"
+      },
+      "Block": {
+        "Id": 5,
+        "Name": "Christina"
+      }
+    },
+    {
+      "NetID": "lq2106",
+      "Name": "Jennifer Qian",
+      "Id": 472,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "scm997",
+      "Name": "Shannon McMahon",
+      "Id": 473,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "rh3645",
+      "Name": "Nora He",
+      "Id": 474,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "alc977",
+      "Name": "Amy Cuello",
+      "Id": 475,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "eaa827",
+      "Name": "Elizabeth Acevedo",
+      "Id": 476,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "sez831",
+      "Name": "Sarah Fils",
+      "Id": 477,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "zy2727",
+      "Name": "Chelsea Yang",
+      "Id": 478,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "mx2157",
+      "Name": "Maggie Xu",
+      "Id": 479,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "ys5170",
+      "Name": "Phoebe Sui",
+      "Id": 480,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "zq2192",
+      "Name": "Andy Qi",
+      "Id": 481,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "kh3788",
+      "Name": "Khushi Hora",
+      "Id": 482,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "rf2552",
+      "Name": "Ruihao Feng",
+      "Id": 483,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "yy4420",
+      "Name": "Yingfei Yuan",
+      "Id": 484,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "my3124",
+      "Name": "Manling Yang",
+      "Id": 485,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    },
+    {
+      "NetID": "yw6497",
+      "Name": "Yaxuan Wen",
+      "Id": 486,
+      "CreatedAt": "2026-03-16 20:51:07",
+      "UpdatedAt": null,
+      "Type": "Capstone",
+      "nc_w3s____Advisors_id": null,
+      "nc_w3s____Advisors_id1": null,
+      "nc_w3s____Advisors_id2": 8,
+      "nc_w3s____Advisors_id3": 8,
+      "order": null,
+      "Advisor": {
+        "Id": 8,
+        "Name": "Rashida"
+      },
+      "Block": {
+        "Id": 8,
+        "Name": "Rashida"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalRows": 162,
+    "page": 1,
+    "pageSize": 1000,
+    "isFirstPage": true,
+    "isLastPage": true
+  }
+}
