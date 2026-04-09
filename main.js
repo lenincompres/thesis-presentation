@@ -1,5 +1,5 @@
 import getColor, {
-  assignColorsToObjects,
+  assignColorsToAdvisors,
   formatTime,
 } from "./Aux.js";
 
@@ -66,7 +66,7 @@ async function loadData() {
     day.advisors.push(advisor);
   });
 
-  assignColorsToObjects(advisors);
+  assignColorsToAdvisors(advisors);
 
   _advisors.value = advisors.sort((a, b) => a.label.localeCompare(b.label));
   _students.value = students.sort((a, b) => a.label.localeCompare(b.label));
@@ -149,7 +149,7 @@ document.body.set({
           },
           {
             class: 'thesis-archive-link',
-            href: '#',
+            href: 'https://itp.nyu.edu/thesis/archive/2026/',
             target: '_blank',
             text: 'Thesis Archive',
           }, {

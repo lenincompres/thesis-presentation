@@ -5,16 +5,15 @@ export const advisorsColorMap = {};
 const itpPalette = [];
 const imaPalette = [];
 
-export function setPallettes(numColors) {
-  let num = 7,
+export function setPallettes(numColors = 7) {
+  let num = numColors,
     h = 0,
-    s = 66,
-    l = 34,
+    s = 80,
+    l = 26,
     d = 360 / num;
-
   for (let i = 0; i < num; i++) {
     itpPalette.push(`hsl(${h}, ${s}%, ${l}%)`); // dark
-    imaPalette.push(`hsl(${(15+h)%255}, ${s}%, 75%)`); // light
+    imaPalette.push(`hsl(${(d/2+h)%360}, ${0.7*s}%, 80%)`); // light
     h += d;
   }
 }
@@ -30,18 +29,19 @@ export function getColor(id, program, numColors = 20) {
 
     advisorsColorMap[id] = {
       bg: isITP ? itpPalette[i % itpPalette.length] : imaPalette[i % imaPalette.length],
-      fg: isITP ? '#ffffff' : '#000000',
+      fg: isITP ? '#fffc' : '#000c',
       program
     };
   }
   return advisorsColorMap[id];
 }
 
-export function assignColorsToObjects(objs) {
-  objs.forEach(obj => {
-    const colorInfo = getColor(obj.Id, obj.Program, objs.length);
-    obj.bgColor = colorInfo.bg;
-    obj.fgColor = colorInfo.fg;
+export function assignColorsToAdvisors(advisors) {
+  let num = advisors.filter(a => 'ITP' === a.Program).length;
+  advisors.forEach(advisor => {
+    const colorInfo = getColor(advisor.Id, advisor.Program, num);
+    advisor.bgColor = colorInfo.bg;
+    advisor.fgColor = colorInfo.fg;
   });
 }
 
