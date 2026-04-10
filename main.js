@@ -89,7 +89,7 @@ function scrollToSchedule() {
   });
 }
 
-function scrollToSection(advisor)  {
+function scrollToSection(advisor) {
   if (advisor.advisor) advisor = advisor.advisor;
   _legend.value = null;
   _activeDay.value = advisor.day ? advisor.day : _activeDay.value;
@@ -113,6 +113,7 @@ document.body.set({
       'site-banner': true,
       blurred: _scheduleViewed.as(),
     },
+    p: _scheduleViewed,
     opacity: '1',
     position: 'fixed',
     height: '100vh',
@@ -163,25 +164,29 @@ document.body.set({
         aside: [{
           display: _legend.as(l => l === 'advisors' ? 'flex' : 'none'),
           class: 'legend',
-          a_link: _advisors.as(advisors => advisors.map(advisor => ({
-            class: 'legend-item',
-            backgroundColor: advisor.bgColor,
-            color: advisor.fgColor,
-            text: advisor.label,
-            onclick: () => scrollToSection(advisor),
-          }))),
+          content: _advisors.as(advisors => ({
+            a: advisors.map(advisor => ({
+              class: 'legend-item',
+              backgroundColor: advisor.bgColor,
+              color: advisor.fgColor,
+              text: advisor.label,
+              onclick: () => scrollToSection(advisor),
+            }))
+          })),
         }, {
           display: _legend.as(l => l === 'students' ? 'flex' : 'none'),
           class: 'legend',
-          a_link: _students.as(students => students.map(student => ({
-            class: 'legend-item',
-            backgroundColor: student.advisor ?
-              student.advisor.bgColor : '#ccc',
-            color: student.advisor ?
-              student.advisor.fgColor : '#333',
-            text: student.label,
-            onclick: () => scrollToSection(student),
-          }))),
+          content: _students.as(students => ({
+            a: students.map(student => ({
+              class: 'legend-item',
+              backgroundColor: student.advisor ?
+                student.advisor.bgColor : '#ccc',
+              color: student.advisor ?
+                student.advisor.fgColor : '#333',
+              text: student.label,
+              onclick: () => scrollToSection(student),
+            }))
+          })),
         }]
       },
     }, {
