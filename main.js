@@ -76,13 +76,6 @@ async function loadData() {
 }
 loadData();
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
-
 function scrollToSchedule() {
   scheduleElement.scrollIntoView({
     behavior: 'smooth'
@@ -106,14 +99,16 @@ function scrollToSection(advisor) {
 ================================ */
 
 document.body.set({
-  onclick: () => _scheduleViewed.value && scrollToTop(),
+  onclick: () => _scheduleViewed.value && window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  }),
   onscroll: () => _scheduleViewed.value = window.scrollY > 100,
   div: {
     class: {
       'site-banner': true,
       blurred: _scheduleViewed.as(),
     },
-    p: _scheduleViewed,
     opacity: '1',
     position: 'fixed',
     height: '100vh',
@@ -196,7 +191,10 @@ document.body.set({
         id: 'menu-toggle',
         ariaLabel: 'Open Menu',
         text: '☰',
-        onclick: () => scrollToTop(),
+        onclick: () => window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        }),
       },
       div_container: {
         img: {
