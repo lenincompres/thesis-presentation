@@ -114,7 +114,7 @@ document.body.set({
     height: '100vh',
     width: '100vw',
     img: {
-      src: 'assets/banner.png',
+      src: 'assets/temp_web-banner.png',
       alt: 'IMA/ITP Thesis Capstone Banner',
       button: {
         id: 'viewScheduleBtn',
@@ -198,10 +198,10 @@ document.body.set({
       },
       div_container: {
         img: {
-          borderRadius: '20px',
+          borderRadius: '4px',
           marginBottom: '1rem',
           width: '100%',
-          src: 'assets/banner.png',
+          src: 'assets/temp_web-banner.png',
           alt: 'IMA/ITP Thesis Capstone Banner',
         },
         menu_tabs: {

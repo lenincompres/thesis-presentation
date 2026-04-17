@@ -79,23 +79,19 @@
   /* Lighter Blue */
   --secondary: #F1F1F1;
   /* Light Gray */
-  --text: #000000;
-  /* Dark Gray -> Black for High Contrast */
-  --text-light: #333333;
-  /* Medium Gray -> Darker Gray for High Contrast */
+  --text: #2d4439;
+  /* Dark green */
+  --text-light: #507765;
+  /* Medium-dark green */
   --break: #FFADAD;
   /* Soft Red */
   --break-light: #FFE5E5;
   /* Lighter Red */
-  --border: #EAEAEA;
-  /* Very Light Gray */
+  --border: #507765;
   --white: #FFFFFF;
-  --bg-body: #FDFDFF;
-  /* Very Light Gray/Off-white */
-  --banner-text: #000000;
-  /* Muted brown -> Black for High Contrast */
-  --border-radius-large: 20px;
-  /* Super round corners */
+  --bg-body: #e8e8dd;
+  /* Gray */
+  --border-radius-large: 4px;
 }
 
 * {
@@ -106,53 +102,25 @@
 
 body {
   font-family: 'Space Mono', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  /* Added Nunito */
   color: var(--text);
-  /* Updated background with a gradient */
-  background: linear-gradient(135deg,
-      #A0C4FF,
-      /* Soft Blue */
-      #BDECB6,
-      /* Light Green */
-      #FFFDBB,
-      /* Light Yellow */
-      #FFDAC1,
-      /* Peach */
-      #FFADAD,
-      /* Soft Red */
-      #D7B0FF
-      /* Light Purple */
-    );
-  background-size: 600% 600%;
-  /* Make gradient larger for smoother transition */
-  animation: gradientBG 15s ease infinite;
-  /* Animate the gradient */
-  /* Removed gradient background - will be covered */
   background-color: var(--bg-body);
   line-height: 1.5;
   padding: 0;
-  /* Remove body padding, handle spacing with banner/container */
-  /* Add padding-top to push content below the initially rendered banner */
-  /* This value might need adjustment depending on the banner image aspect ratio */
-  /* padding-top: 60vh; REMOVED */
 }
 
 .site-banner {
-  color: var(--banner-text);
+  color: var(--text);
   padding: 0;
-  /* REMOVED padding */
   line-height: 0;
-  /* Fixed Full Viewport Banner */
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   /* height: 100vh; REMOVED */
   height: 100vh;
-  /* RESTORED */
   z-index: 1;
   /* background-color: #000; CHANGED Fallback color if image fails */
-  background-color: #f9f8f2;
+  background-color: var(--bg-body);
   /* Set desired background */
   transition: filter 0.3s ease;
   /* Add transition for smooth blur effect */
@@ -325,14 +293,15 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   /* Reduced width */
   /* margin: 100vh auto 2rem; CHANGED */
   /* margin: 2rem auto 2rem; CHANGED Set top margin relative to body padding */
   margin: 100vh auto 2rem;
   /* RESTORED Start below banner */
   padding: 2rem;
-  background-color: var(--white);
+  background-color: var(--bg-body);
+  border: 1px solid var(--border);
   border-radius: var(--border-radius-large);
   /* Use variable */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -356,21 +325,22 @@ h1 {
 .tabs {
   display: flex;
   gap: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .tab-button {
-  padding: 0.75rem 1.25rem;
+  font-family: 'Space Mono', 'monospace';
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  padding: 0.5rem 0.75rem;
   background-color: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--border-radius-large);
-  /* Use variable */
-  font-weight: 600;
-  /* Bolder */
-  font-size: 0.9rem;
-  /* Slightly smaller */
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
   color: var(--text);
@@ -381,15 +351,6 @@ h1 {
   border-color: var(--primary);
   color: var(--text);
   /* Changed from --primary */
-}
-
-.tab-button.active {
-  background-color: var(--primary);
-  color: var(--text);
-  /* Changed from var(--white) to var(--text) for higher contrast */
-  border-color: var(--primary);
-  font-weight: 700;
-  /* Make active text bolder for even better contrast */
 }
 
 /* Add specific colors for each day */
@@ -431,6 +392,8 @@ h1 {
   border-color: var(--day-color);
   font-weight: 700;
   /* Make active text bolder for even better contrast */
+  border: 1px solid var(--border);
+
 }
 
 .schedule {
@@ -442,8 +405,23 @@ h1 {
   animation: fadeIn 0.3s ease;
 }
 
+.schedule h2{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.25rem;
+}
+
 .timeline {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .time-labels {
@@ -485,13 +463,12 @@ h1 {
 }
 
 .time {
-  width: 6em;
-  /* Slightly narrower time */
-  font-size: 0.9rem;
+
+  font-size: 1rem;
   /* Increased from 0.8rem */
   color: var(--text);
   /* Changed from --text-light to --text for better contrast */
-  font-weight: 600;
+  font-weight: 400;
   /* Increased from 500 */
   display: flex;
   align-items: center;
@@ -508,6 +485,8 @@ h1 {
   /* Added rounded corners */
   margin-right: 0.5rem;
   /* Added spacing */
+  height: 100%;
+  letter-spacing: 0.5px;
 }
 
 .slot-content {
@@ -587,6 +566,9 @@ h1 {
   /* Hide overflow */
   text-overflow: ellipsis;
   /* Add ellipsis */
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .student-slot .slot-number {
@@ -675,16 +657,13 @@ h1 {
 .schedule-section {
   border: 1px solid var(--border);
   /* Folder-like corners: Rounded top, square bottom */
-  border-radius: 10px;
+  border-radius: 4px;
   /* Rounded all corners */
-  margin-bottom: 1.5rem;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   transition: background-color 0.3s ease;
   position: relative;
-  /* Needed for absolute positioning of the tab */
-  padding-top: 1rem;
   /* Adjust padding-top if needed based on tab */
-  margin-top: 30px;
+  margin-top: 56px;
   /* Increased margin-top for more tab clearance */
   /* Remove background-clip if it causes issues */
   /* background-clip: padding-box; */
@@ -692,19 +671,19 @@ h1 {
 
 .section-department-tab {
   position: absolute;
-  top: -25px;
-  left: 15px;
+  top: -37px;
+  left: -1px;
   background-color: inherit;
   color: var(--text);
   padding: 0.4rem 0.8rem;
   border: 1px solid var(--border);
   border-bottom: none;
-  border-radius: 8px 8px 0 0;
-  font-size: 0.75rem;
-  font-weight: 700;
+  border-radius: 4px 4px 0 0;
+  font-size: 1rem;
+  font-weight: 400;
   z-index: 5;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.75px;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.2s ease;
