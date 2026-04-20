@@ -89,9 +89,10 @@
   /* Lighter Red */
   --border: #507765;
   --white: #FFFFFF;
-  --bg-body: #e8e8dd;
+  --bg-body: #e3e3d7;
   /* Gray */
   --border-radius-large: 4px;
+  --day-color: #F0F2B4;
 }
 
 * {
@@ -103,14 +104,16 @@
 body {
   font-family: 'Space Mono', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
-  background-color: var(--bg-body);
+  /* background-color: var(--bg-body); */
+  background: linear-gradient(to bottom, #fffff3 0%, #F0F2B4 30%, #fffff3 100%);
   line-height: 1.5;
   padding: 0;
 }
 
 .site-banner {
   color: var(--text);
-  padding: 0;
+  padding: 0 10vw;
+  margin-top: -3vw;
   line-height: 0;
   position: fixed;
   top: 0;
@@ -120,7 +123,7 @@ body {
   height: 100vh;
   z-index: 1;
   /* background-color: #000; CHANGED Fallback color if image fails */
-  background-color: var(--bg-body);
+  /* background-color: var(--bg-body); */
   /* Set desired background */
   transition: filter 0.3s ease;
   /* Add transition for smooth blur effect */
@@ -155,11 +158,14 @@ body {
   z-index: 2;
   /* Above banner image, below nav */
   padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Space Mono', 'monospace';
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: var(--text);
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--border);
   border-radius: var(--border-radius-large);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -235,7 +241,9 @@ body {
   color: var(--text);
   /* Changed from --primary */
   text-decoration: none;
-  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 400;
   font-size: 1rem;
   transition: background-color 0.2s ease, color 0.2s ease;
   display: block;
@@ -244,7 +252,7 @@ body {
   /* Space between links */
   padding: 0.4rem 0.8rem;
   /* Padding inside link */
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.75);
   /* Updated Semi-transparent background */
   border-radius: var(--border-radius-large);
   /* Use variable for consistent rounding */
@@ -253,6 +261,10 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+}
+
+.site-nav>a::before{
+  content: '> ';
 }
 
 .site-nav a.livestream-link {
@@ -339,50 +351,45 @@ h1 {
   background-color: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--border-radius-large);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
   color: var(--text);
 }
 
-.tab-button:hover {
-  background-color: var(--primary-light);
-  border-color: var(--primary);
-  color: var(--text);
-  /* Changed from --primary */
-}
 
 /* Add specific colors for each day */
 .tab-button[data-day="monday"] {
-  --day-color: #FFB5E8;
+  /* --day-color: #FFB5E8; */
   /* Pastel Pink */
 }
 
 .tab-button[data-day="tuesday"] {
-  --day-color: #B5DEFF;
+  /* --day-color: #B5DEFF; */
   /* Pastel Blue */
 }
 
 .tab-button[data-day="wednesday"] {
-  --day-color: #BFFCC6;
+  /* --day-color: #BFFCC6; */
   /* Pastel Green */
 }
 
 .tab-button[data-day="thursday"] {
-  --day-color: #FFC9DE;
+  /* --day-color: #FFC9DE; */
   /* Pastel Rose */
 }
 
 .tab-button[data-day="friday"] {
-  --day-color: #D5AAFF;
+  /* --day-color: #D5AAFF; */
   /* Pastel Purple */
 }
 
 .tab-button:hover {
   background-color: var(--day-color);
-  border-color: var(--day-color);
+  /* border-color: var(--day-color); */
   color: var(--text);
+  font-weight: 700;
 }
 
 .tab-button.active {
@@ -393,6 +400,7 @@ h1 {
   font-weight: 700;
   /* Make active text bolder for even better contrast */
   border: 1px solid var(--border);
+  
 
 }
 
@@ -769,13 +777,14 @@ h1 {
   width: 40px;
   height: 40px;
   font-size: 1.5rem;
-  line-height: 38px;
+  line-height: 1;
   /* Center icon vertically */
   text-align: center;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(3px);
   color: var(--text);
+  padding-bottom: 4px;
 }
 
 #menu-toggle {
