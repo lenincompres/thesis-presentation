@@ -105,7 +105,7 @@ body {
   font-family: 'Space Mono', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
   /* background-color: var(--bg-body); */
-  background: linear-gradient(to bottom, #fffff3 0%, #F0F2B4 30%, #fffff3 100%);
+  background: linear-gradient(to bottom, #fffff3 0%, #F0F2B4 20%, #e3e3d7 50%);
   line-height: 1.5;
   padding: 0;
 }
@@ -130,7 +130,7 @@ body {
 }
 
 .site-banner.blurred {
-  filter: blur(8px);
+  filter: blur(8px) opacity(0.25);
   /* Apply blur effect when class is added */
 }
 
@@ -461,17 +461,22 @@ h1 {
 
 .time-slot {
   display: flex;
-  margin-bottom: 1.2rem;
   /* Increased space to prevent overlap */
-  height: 3.2rem;
+  /* height: 3.2rem; */
   /* Slightly shorter */
   position: relative;
   align-items: center;
   /* Align items vertically */
+  border-top: 1px solid var(--border);
+}
+
+.time-slot:first-child {
+  border-top: none;
+  /* margin-top: -1.75rem; */
 }
 
 .time {
-
+  width:110px;
   font-size: 1rem;
   /* Increased from 0.8rem */
   color: var(--text);
@@ -481,13 +486,11 @@ h1 {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  justify-content: flex-end;
-  /* Right align time */
-  padding-right: 0.75rem;
+  justify-content: center;
   /* Space between time and slot */
   background-color: rgba(255, 255, 255, 0.7);
   /* Added subtle background */
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.8rem;
   /* Added padding */
   border-radius: 4px;
   /* Added rounded corners */
@@ -499,23 +502,28 @@ h1 {
 
 .slot-content {
   flex: 1;
-  background-color: #fff3;
+  /* background-color: #fff3; */
   border: none;
   /* Remove base border */
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.5); */
   /* Lighter top */
   border-radius: var(--border-radius-large);
   /* Use variable */
-  padding: 0.6rem 0.9rem;
+  padding: 1.5rem 0.75rem;
   /* Adjusted padding */
-  font-size: 0.9rem;
+  font-size: 1rem;
   /* Adjusted font size */
   transition: all 0.2s ease;
   display: flex;
+  gap: 0.5rem;
   align-items: center;
   height: 100%;
   min-width: 0;
   /* Allow shrinking */
+}
+
+.section-content:last-child {
+  margin-bottom: -1rem;
 }
 
 .slot-content:hover {
@@ -531,12 +539,9 @@ h1 {
 .student-slot .slot-content,
 .break-slot .slot-content {
   border: none;
-  /* Remove base border */
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  /* Lighter top */
   border-radius: var(--border-radius-large);
   /* Use variable */
-  padding: 0.6rem 0.9rem;
+  /* padding: 0.6rem 0.9rem; */
   /* Adjusted padding */
   font-size: 0.9rem;
   /* Adjusted font size */
@@ -580,36 +585,27 @@ h1 {
 }
 
 .student-slot .slot-number {
+  position: relative;
+  top: 1px;
   background-color: #fff8;
   color: black;
   border-radius: 50%;
-  width: 22px;
+  width: 32px;
   /* Adjusted size */
-  height: 22px;
+  height: 32px;
   /* Adjusted size */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+  padding-top: 2px;
+  padding-left: 1px;
   /* Adjusted size */
   margin-right: 0.6rem;
   /* Adjusted margin */
   flex-shrink: 0;
-  /* Prevent shrinking */
-  /* 3D Border Effect for Slot Number */
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
-  /* Lighter top */
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  /* Lighter left */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  /* Darker bottom */
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  /* Darker right */
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  /* Subtle drop shadow */
-  /* Ensure text contrasts with dynamic background */
-  /* color: var(--white); /* Set dynamically in JS now */
-  /* background-color: var(--primary); /* Set dynamically in JS now */
+  border: 1px solid var(--border);
+
 }
 
 .legend {
@@ -667,7 +663,7 @@ h1 {
   /* Folder-like corners: Rounded top, square bottom */
   border-radius: 4px;
   /* Rounded all corners */
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 0 1rem 1rem 1rem;
   transition: background-color 0.3s ease;
   position: relative;
   /* Adjust padding-top if needed based on tab */
@@ -708,6 +704,9 @@ h1 {
   transition: max-height 0.4s ease-out;
   opacity: 0;
   transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.2rem; */
 }
 
 .schedule-section.expanded .section-content {
