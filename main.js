@@ -114,7 +114,7 @@ document.body.set({
     height: '100vh',
     width: '100vw',
     img: {
-      src: 'assets/temp_web-banner-01.png',
+      src: 'assets/hero-banner.png',
       alt: 'IMA/ITP Thesis Capstone Banner',
       button: {
         id: 'viewScheduleBtn',
