@@ -8,12 +8,12 @@ const imaPalette = [];
 export function setPallettes(numColors = 7) {
   let num = numColors,
     h = 0,
-    s = 80,
-    l = 26,
-    d = 360 / num;
+    s = 45,
+    l = 85,
+    d = 180 / num;
   for (let i = 0; i < num; i++) {
     itpPalette.push(`hsl(${h}, ${s}%, ${l}%)`); // dark
-    imaPalette.push(`hsl(${(d/2+h)%360}, ${0.7*s}%, 80%)`); // light
+    imaPalette.push(`hsl(${(d/2+h)%360}, ${1*s}%, 85%)`); // light
     h += d;
   }
 }
@@ -29,7 +29,7 @@ export function getColor(id, program, numColors = 20) {
 
     advisorsColorMap[id] = {
       bg: isITP ? itpPalette[i % itpPalette.length] : imaPalette[i % imaPalette.length],
-      fg: isITP ? '#fffc' : '#000c',
+      fg: isITP ? '#555555' : '#555555',
       program
     };
   }
