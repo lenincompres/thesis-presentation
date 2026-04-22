@@ -1,4 +1,4 @@
-import getColor, {
+import {
   assignColorsToAdvisors,
   formatTime,
 } from "./Aux.js";
@@ -10,26 +10,21 @@ const _activeDay = new Binder();
 const _scheduleViewed = new Binder(false);
 const _legend = new Binder();
 
-//const API_URL = 'https://internal.itp.nyu.edu/nocodb-api.php';
-//const API_URL = 'https://internal.itp.nyu.edu/nocodb/api/v2/tables/m1umtpyvxehcyqb/records';
-const STUDENTS_API_URL = 'students.json';
-const ADVISORS_API_URL = 'advisors.json';
-
 /* ===============================
    LOAD DATA
 ================================ */
 
-async function loadData() {
+export async function loadData(STUDENTS_API_URL, ADVISORS_API_URL) {
   const [studentsRes, advisorsRes] = await Promise.all([
     fetch(STUDENTS_API_URL),
     fetch(ADVISORS_API_URL)
   ]);
 
   const advisorData = await advisorsRes.json();
-  const advisors = advisorData.list;
+  const advisors = advisorData.list ? advisorData.list : advisorData;
 
   const studentData = await studentsRes.json();
-  const students = studentData.list;
+  const students = studentData.list ? studentData.list : studentData;
   students.forEach(student => {
     student.advisor = advisors.find(a => student.Advisor && a.Id == student.Advisor.Id);
     student.label = student.advisor ? `${student.advisor.Program} | ${student.Name}` : `${student.Name}`;
@@ -74,7 +69,6 @@ async function loadData() {
   _days.value = days;
   _activeDay.value = _days.value[0];
 }
-loadData();
 
 function scrollToSchedule() {
   scheduleElement.scrollIntoView({
@@ -94,182 +88,199 @@ function scrollToSection(advisor) {
   }
 }
 
+function visitProject(student) {
+  if (student.advisor.Program !== 'ITP') return;
+  window.open('https://itp.nyu.edu/thesis/archive/2026/?s=' + student.Name, '_blank');
+}
+
 /* ===============================
    BUILD DOM
 ================================ */
 
-document.body.set({
-  onclick: () => _scheduleViewed.value && window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  }),
-  onscroll: () => _scheduleViewed.value = window.scrollY > 100,
-  div: {
-    class: {
-      'site-banner': true,
-      blurred: _scheduleViewed.as(),
-    },
-    opacity: '1',
-    position: 'fixed',
-    height: '100vh',
-    width: '100vw',
-    img: {
-      src: 'assets/temp_web-banner-01.png',
-      alt: 'IMA/ITP Thesis Capstone Banner',
+export function buildDOM() {
+  document.body.set({
+    onclick: () => _scheduleViewed.value && window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    }),
+    onscroll: () => _scheduleViewed.value = window.scrollY > 100,
+    div: {
+      class: {
+        'site-banner': true,
+        blurred: _scheduleViewed.as(),
+      },
+      opacity: '1',
+      position: 'fixed',
+      height: '100vh',
+      width: '100vw',
+      img: {
+        src: 'assets/temp_web-banner-01.png',
+        alt: 'IMA/ITP Thesis Capstone Banner',
+      },
       button: {
         id: 'viewScheduleBtn',
         class: 'scroll-down-button',
         text: 'View Schedule',
+        onclick: () => scrollToSchedule(),
       }
     },
-    button: {
-      id: 'viewScheduleBtn',
-      class: 'scroll-down-button',
-      text: 'View Schedule',
-      onclick: () => scrollToSchedule(),
-    }
-  },
-  main: {
-    onclick: e => e.stopPropagation(),
-    id: 'scheduleElement',
-    class: 'layout-wrapper',
-    div: [{
-      display: _scheduleViewed.as('block', 'none'),
-      class: 'left-column',
-      nav: {
-        class: 'site-nav',
-        a: [{
-            class: 'livestresn-link',
-            href: '#',
-            text: 'Livestream',
-          },
-          {
-            class: 'thesis-archive-link',
-            href: 'https://itp.nyu.edu/thesis/archive/2026/',
-            target: '_blank',
-            text: 'Thesis Archive',
-          }, {
-            text: 'Advisors',
-            onclick: () => _legend.value = 'advisors',
-          }, {
-            text: 'Students',
-            onclick: () => _legend.value = 'students',
-          }
-        ],
-        aside: [{
-          display: _legend.as(l => l === 'advisors' ? 'flex' : 'none'),
-          class: 'legend',
-          content: _advisors.as(advisors => ({
-            a: advisors.map(advisor => ({
-              class: 'legend-item',
-              backgroundColor: advisor.bgColor,
-              color: advisor.fgColor,
-              text: advisor.label,
-              onclick: () => scrollToSection(advisor),
-            }))
-          })),
-        }, {
-          display: _legend.as(l => l === 'students' ? 'flex' : 'none'),
-          class: 'legend',
-          content: _students.as(students => ({
-            a: students.map(student => ({
-              class: 'legend-item',
-              backgroundColor: student.advisor ?
-                student.advisor.bgColor : '#ccc',
-              color: student.advisor ?
-                student.advisor.fgColor : '#333',
-              text: student.label,
-              onclick: () => scrollToSection(student),
-            }))
-          })),
-        }]
-      },
-    }, {
-      class: 'right-column',
-      button: {
-        display: _scheduleViewed.as('none', 'block'),
-        id: 'menu-toggle',
-        ariaLabel: 'Open Menu',
-        text: '☰',
-        onclick: () => window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        }),
-      },
-      div_container: {
-        img: {
-          borderRadius: '4px',
-          marginBottom: '1rem',
-          width: '100%',
-          src: 'assets/top-banner.png',
-          alt: 'IMA/ITP Thesis Capstone Banner',
-        },
-        menu_tabs: {
-          button_tab: _days.as(days => days.map(day => ({
-            class: {
-              'tab-button': true,
-              'active': _activeDay.as(d => d === day),
+    main: {
+      onclick: e => e.stopPropagation(),
+      id: 'scheduleElement',
+      class: 'layout-wrapper',
+      div: [{
+        display: _scheduleViewed.as('block', 'none'),
+        class: 'left-column',
+        nav: {
+          class: 'site-nav',
+          a: [{
+              class: 'livestresn-link',
+              href: '#',
+              text: 'Livestream',
             },
-            dataDay: day.label.split(',')[0].toLowerCase(),
-            role: 'tab',
-            text: day.label,
-            onclick: () => _activeDay.value = day,
-          }))),
-        },
-        section_schedule: _days.as(days => days.map(day => ({
-          id: day.label.split(',')[0].toLowerCase(),
-          class: {
-            'visible': _activeDay.as(d => d === day),
-          },
-          role: 'tabpanel',
-          h2: day.label,
-          div_timeline: {
-            div: day.advisors.map(advisor => ({
+            {
+              class: 'thesis-archive-link',
+              href: 'https://itp.nyu.edu/thesis/archive/2026/',
+              target: '_blank',
+              text: 'Thesis Archive',
+            }, {
+              text: 'Advisors',
               class: {
-                'schedule-section': true,
-                'expanded': true,
+                selected: _legend.as(l => l === 'advisors'),
               },
-              backgroundColor: advisor.bgColor,
-              color: advisor.fgColor,
-              div: {
+              onclick: () => {
+                if (_legend.value === 'advisors') return _legend.value = null;
+                _legend.value = 'advisors';
+              },
+            }, {
+              tag: 'menu',
+              display: _legend.as(l => l === 'advisors' ? 'flex' : 'none'),
+              class: 'legend',
+              content: _advisors.as(advisors => ({
+                a: advisors.map(advisor => ({
+                  class: 'legend-item',
+                  backgroundColor: advisor.bgColor,
+                  color: advisor.fgColor,
+                  text: advisor.label,
+                  onclick: () => scrollToSection(advisor),
+                }))
+              })),
+            }, {
+              text: 'Students',
+              class: {
+                selected: _legend.as(l => l === 'students'),
+              },
+              onclick: () => {
+                if (_legend.value === 'students') return _legend.value = null;
+                _legend.value = 'students';
+              },
+            }, {
+              tag: 'menu',
+              display: _legend.as(l => l === 'students' ? 'flex' : 'none'),
+              class: 'legend',
+              content: _students.as(students => ({
+                a: students.map(student => ({
+                  class: 'legend-item',
+                  backgroundColor: student.advisor ?
+                    student.advisor.bgColor : '#ccc',
+                  color: student.advisor ?
+                    student.advisor.fgColor : '#333',
+                  text: student.label,
+                  onclick: () => scrollToSection(student),
+                }))
+              })),
+            }
+          ],
+        },
+      }, {
+        class: 'right-column',
+        button: {
+          display: _scheduleViewed.as('none', 'block'),
+          id: 'menu-toggle',
+          ariaLabel: 'Open Menu',
+          text: '☰',
+          onclick: () => window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          }),
+        },
+        div_container: {
+          img: {
+            borderRadius: '4px',
+            marginBottom: '1rem',
+            width: '100%',
+            src: 'assets/top-banner.png',
+            alt: 'IMA/ITP Thesis Capstone Banner',
+          },
+          menu_tabs: {
+            role: 'tablist',
+            button_tab: _days.as(days => days.map(day => ({
+              class: {
+                'tab-button': true,
+                'active': _activeDay.as(d => d === day),
+              },
+              dataDay: day.label.split(',')[0].toLowerCase(),
+              role: 'tab',
+              text: day.label,
+              onclick: () => _activeDay.value = day,
+            }))),
+          },
+          section_schedule: _days.as(days => days.map(day => ({
+            id: day.label.split(',')[0].toLowerCase(),
+            class: {
+              'visible': _activeDay.as(d => d === day),
+            },
+            role: 'tabpanel',
+            h2: day.label,
+            div_timeline: {
+              div: day.advisors.map(advisor => ({
+                class: {
+                  'schedule-section': true,
+                  'expanded': true,
+                },
                 backgroundColor: advisor.bgColor,
                 color: advisor.fgColor,
-                class: 'section-department-tab',
-                text: advisor.label,
-                ondone: el => advisor.element = el,
-              },
-              section: {
-                class: 'section-content',
-                div: advisor.slots.map((student, i) => ({
-                  class: {
-                    'time-slot': true,
-                    'student-slot': !!student,
-                    'break-slot': !student,
-                  },
-                  div: [{
-                      class: 'time',
-                      text: formatTime(advisor.date, i * 12),
+                div: {
+                  backgroundColor: advisor.bgColor,
+                  color: advisor.fgColor,
+                  class: 'section-department-tab',
+                  text: advisor.label,
+                  ondone: el => advisor.element = el,
+                },
+                section: {
+                  class: 'section-content',
+                  div: advisor.slots.map((student, i) => ({
+                    class: {
+                      'time-slot': true,
+                      'student-slot': !!student,
+                      'break-slot': !student,
                     },
-                    {
-                      class: 'slot-content',
-                      div: [{
-                          class: 'slot-number',
-                          text: i + 1,
-                        },
-                        {
-                          class: 'student-name',
-                          text: !!student ? student.Name : 'BREAK',
-                        }
-                      ],
-                      ondone: el => student.element = el,
-                    }
-                  ]
-                })),
-              }
-            })),
-          },
-        }))),
-      }
-    }]
-  }
-});
+                    div: [{
+                        class: 'time',
+                        text: formatTime(advisor.date, i * 12),
+                      },
+                      {
+                        class: 'slot-content',
+                        div: [{
+                            class: 'slot-number',
+                            text: i + 1,
+                          },
+                          {
+                            class: 'student-name',
+                            text: !!student ? student.Name : 'BREAK',
+                          }
+                        ],
+                        ondone: el => student.element = el,
+                      }
+                    ],
+                    onclick: () => visitProject(student),
+                  })),
+                }
+              })),
+            },
+          }))),
+        }
+      }]
+    }
+  });
+}

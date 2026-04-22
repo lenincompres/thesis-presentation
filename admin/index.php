@@ -1,10 +1,11 @@
+<?php require_once("auth/require_oauth2.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Weekly Advisor Calendar</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="DOM.js"></script>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../DOM.js"></script>
 </head>
 <body>
 <script src="index.js" type="module" ></script>

@@ -2,35 +2,34 @@ export const advisorsColorMap = {};
 
 // Dark palette → ITP (white text)
 // Light palette → IMA (black text)
-const itpPalette = [];
-const imaPalette = [];
+let itpPalette = [15, 30]; // saturation, lightness
+let imaPalette = [42, 87]; // saturation, lightness
+let textColor = ['#eee', '#333']; // itp, ima
 
-export function setPallettes(numColors = 7) {
-  let num = numColors,
-    h = 0,
-    s = 45,
-    l = 85,
-    d = 180 / num;
+export function getColorArray(num, s = 50, l = 50, h = 0){
+  let d = 360 / num;
+  let arr = [];
   for (let i = 0; i < num; i++) {
-    itpPalette.push(`hsl(${h}, ${s}%, ${l}%)`); // dark
-    imaPalette.push(`hsl(${(d/2+h)%360}, ${1*s}%, 85%)`); // light
+    arr.push(`hsl(${h%360}, ${s}%, ${l}%)`);
     h += d;
   }
+  return arr;
 }
 
-export function getColor(id, program, numColors = 20) {
-  if (itpPalette.length === 0 || imaPalette.length === 0) {
-    setPallettes(numColors);
+export function getColor(id, program, advisors) {
+  if (itpPalette.length < 3 && imaPalette.length < 3) {
+    let itpCount = advisors.filter(a => 'ITP' === a.Program).length;
+    itpPalette = getColorArray(itpCount, ...itpPalette);
+    imaPalette = getColorArray(advisors.length - itpCount, ...imaPalette);
   }
   if (!advisorsColorMap[id]) {
     const isITP = program === 'ITP';
     const i = Object.values(advisorsColorMap)
       .filter(a => a.program === program).length;
-
     advisorsColorMap[id] = {
-      bg: isITP ? itpPalette[i % itpPalette.length] : imaPalette[i % imaPalette.length],
-      fg: isITP ? '#555555' : '#555555',
-      program
+      bg: isITP  ? itpPalette[i % itpPalette.length] : imaPalette[i % imaPalette.length],
+      fg: isITP ? textColor[0] : textColor[1],
+      program: program,
     };
   }
   return advisorsColorMap[id];
@@ -39,7 +38,7 @@ export function getColor(id, program, numColors = 20) {
 export function assignColorsToAdvisors(advisors) {
   let num = advisors.filter(a => 'ITP' === a.Program).length;
   advisors.forEach(advisor => {
-    const colorInfo = getColor(advisor.Id, advisor.Program, num);
+    const colorInfo = getColor(advisor.Id, advisor.Program, advisors);
     advisor.bgColor = colorInfo.bg;
     advisor.fgColor = colorInfo.fg;
   });
@@ -65,5 +64,3 @@ export function formatTime(dateInput, addMinutes = 0) {
 
   return `${hour12}:${minute} ${ampm}`;
 }
-
-export default getColor;

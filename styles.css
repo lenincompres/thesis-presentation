@@ -181,7 +181,7 @@ body {
 
 .site-nav {
   position: fixed;
-  top: 0;
+  top: 3rem;
   left: 0;
   z-index: 101;
   padding: 1rem;
@@ -237,34 +237,36 @@ body {
 }
 
 .site-nav>a {
+  max-width: 13em;
   cursor: pointer;
   color: var(--text);
-  /* Changed from --primary */
-  text-decoration: none;
+  /*Changedfrom--primary*/text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.75px;
   font-weight: 400;
   font-size: 1rem;
   transition: background-color 0.2s ease, color 0.2s ease;
   display: block;
-  /* Make links block-level for easier spacing */
-  margin-bottom: 0.5rem;
-  /* Space between links */
-  padding: 0.4rem 0.8rem;
-  /* Padding inside link */
-  background-color: rgba(255, 255, 255, 0.75);
-  /* Updated Semi-transparent background */
-  border-radius: var(--border-radius-large);
-  /* Use variable for consistent rounding */
-  backdrop-filter: blur(3px);
-  /* Frosted glass effect */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /*Makelinksblock-levelforeasierspacing*/margin-bottom: 0.5rem;
+  /*Spacebetweenlinks*/padding: 0.4rem 0.8rem;
+  /*Paddinginsidelink*/background-color: rgba(255, 255, 255, 0.75);
+  /*UpdatedSemi-transparentbackground*/border-radius: var(--border-radius-large);
+  /*Usevariableforconsistentrounding*/backdrop-filter: blur(3px);
+  /*Frostedglasseffect*/box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
+  -moz-transition: background-color 0.2s ease, color 0.2s ease;
+  -ms-transition: background-color 0.2s ease, color 0.2s ease;
+  -o-transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .site-nav>a::before{
   content: '> ';
+}
+
+.site-nav>a.selected::before{
+  content: '- ';
 }
 
 .site-nav a.livestream-link {
@@ -609,16 +611,12 @@ h1 {
 }
 
 .legend {
-  position: relative;
   flex-direction: column;
   width: fit-content;
   max-height: 34em;
   overflow-y: auto;
-  margin: 2rem;
+  margin: 0 2rem;
   padding: 1rem;
-  left: 7em;
-  top: -8em;
-  z-index: 1000;
 }
 
 .legend-item {
