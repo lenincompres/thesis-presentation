@@ -266,6 +266,11 @@ document.body.set({
                             class: 'thesis-archive-button',
                             text: 'thesis archive',
                             ariaLabel: 'View thesis archive',
+                            img: {
+                              src: 'assets/diagonal-arrow.svg',
+                              class: 'thesis-archive-arrow',
+                              alt: 'diagonal arrow'
+                            }
                           },
                         }] : []),
                       ],
