@@ -266,6 +266,7 @@ document.body.set({
                             class: 'thesis-archive-button',
                             text: 'thesis archive',
                             ariaLabel: 'View thesis archive',
+                            /* ADD LINK TO THE THESIS ARCHIVE */
                             img: {
                               src: 'assets/diagonal-arrow.svg',
                               class: 'thesis-archive-arrow',

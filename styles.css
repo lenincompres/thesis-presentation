@@ -89,7 +89,7 @@
   /* Lighter Red */
   --border: #507765;
   --white: #FFFFFF;
-  --bg-body: #e3e3d7;
+  --bg-body: #c3bfb2;
   /* Gray */
   --border-radius-large: 4px;
   --day-color: #F0F2B4;
@@ -563,7 +563,7 @@ h1 {
 }
 
 .student-slot .student-name {
-  font-weight: 600;
+  font-weight: 400;
   /* Bolder names */
   white-space: nowrap;
   /* Prevent wrapping */
@@ -571,7 +571,7 @@ h1 {
   /* Hide overflow */
   text-overflow: ellipsis;
   /* Add ellipsis */
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
