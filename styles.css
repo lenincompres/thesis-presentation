@@ -89,7 +89,7 @@
   /* Lighter Red */
   --border: #507765;
   --white: #FFFFFF;
-  --bg-body: #e3e3d7;
+  --bg-body: #c3bfb2;
   /* Gray */
   --border-radius-large: 4px;
   --day-color: #F0F2B4;
@@ -526,14 +526,6 @@ h1 {
   margin-bottom: -1rem;
 }
 
-.slot-content:hover {
-  /* border-color: var(--primary); Keep base hover border */
-  border-color: var(--text-light);
-  /* Use a darker neutral border on hover */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  /* Softer shadow */
-}
 
 /* 3D Border Effect for Slot Content (Students & Breaks) */
 .student-slot .slot-content,
@@ -571,7 +563,7 @@ h1 {
 }
 
 .student-slot .student-name {
-  font-weight: 600;
+  font-weight: 400;
   /* Bolder names */
   white-space: nowrap;
   /* Prevent wrapping */
@@ -579,7 +571,7 @@ h1 {
   /* Hide overflow */
   text-overflow: ellipsis;
   /* Add ellipsis */
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
@@ -587,7 +579,7 @@ h1 {
 .student-slot .slot-number {
   position: relative;
   top: 1px;
-  background-color: #fff8;
+  background-color: rgba(255, 255, 255, 0.75);
   color: black;
   border-radius: 50%;
   width: 32px;
@@ -606,6 +598,34 @@ h1 {
   flex-shrink: 0;
   border: 1px solid var(--border);
 
+}
+
+.thesis-archive-slot {
+  margin-left: auto;
+}
+
+.thesis-archive-button {
+  font-family: 'Space Mono', 'monospace';
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  padding: 0.5rem 0.75rem;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-large);
+  cursor: pointer;
+}
+
+.thesis-archive-button:hover {
+  background-color: var(--white);
+  color: var(--text);
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
+}
+
+.thesis-archive-arrow {
+  width: 10px;
+  height: 10px;
+  margin-left: 0.5rem;
 }
 
 .legend {

@@ -114,7 +114,7 @@ document.body.set({
     height: '100vh',
     width: '100vw',
     img: {
-      src: 'assets/temp_web-banner-01.png',
+      src: 'assets/hero-banner.png',
       alt: 'IMA/ITP Thesis Capstone Banner',
       button: {
         id: 'viewScheduleBtn',
@@ -259,7 +259,21 @@ document.body.set({
                         {
                           class: 'student-name',
                           text: !!student ? student.Name : 'BREAK',
-                        }
+                        },
+                        ...(!!student && advisor.Program === 'ITP' ? [{
+                          class: 'thesis-archive-slot',
+                          button: {
+                            class: 'thesis-archive-button',
+                            text: 'thesis archive',
+                            ariaLabel: 'View thesis archive',
+                            /* ADD LINK TO THE THESIS ARCHIVE */
+                            img: {
+                              src: 'assets/diagonal-arrow.svg',
+                              class: 'thesis-archive-arrow',
+                              alt: 'diagonal arrow'
+                            }
+                          },
+                        }] : []),
                       ],
                       ondone: el => student.element = el,
                     }
