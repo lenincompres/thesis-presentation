@@ -93,6 +93,13 @@ function visitProject(student) {
   window.open('https://itp.nyu.edu/thesis/archive/2026/?s=' + student.Name, '_blank');
 }
 
+const _isPortrait = new Binder(false);
+function checkWindowSize(){
+  _isPortrait.value = window.innerWidth < 0.7 * window.innerHeight;
+}
+window.addEventListener('resize', () => checkWindowSize());
+checkWindowSize();
+
 /* ===============================
    BUILD DOM
 ================================ */
@@ -114,7 +121,7 @@ export function buildDOM() {
       height: '100vh',
       width: '100vw',
       img: {
-        src: 'assets/temp_web-banner-01.png',
+        src: _isPortrait.as('assets/hero-banner.png','assets/hero-banner-mobile.png'),
         alt: 'IMA/ITP Thesis Capstone Banner',
       },
       button: {
