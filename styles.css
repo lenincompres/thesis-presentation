@@ -608,6 +608,10 @@ h1 {
 
 }
 
+.thesis-archive-slot {
+  margin-left: auto;
+}
+
 .legend {
   position: relative;
   flex-direction: column;

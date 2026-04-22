@@ -259,7 +259,15 @@ document.body.set({
                         {
                           class: 'student-name',
                           text: !!student ? student.Name : 'BREAK',
-                        }
+                        },
+                        ...(!!student && advisor.Program === 'ITP' ? [{
+                          class: 'thesis-archive-slot',
+                          button: {
+                            class: 'thesis-archive-button',
+                            text: 'thesis archive',
+                            ariaLabel: 'View thesis archive',
+                          },
+                        }] : []),
                       ],
                       ondone: el => student.element = el,
                     }
