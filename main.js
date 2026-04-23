@@ -3,7 +3,7 @@ import {
   formatTime,
 } from "./Aux.js";
 
-const _advisors = new Binder([]);
+export const _advisors = new Binder([]);
 const _students = new Binder([]);
 const _days = new Binder([]);
 const _activeDay = new Binder();
@@ -33,11 +33,22 @@ export async function loadData(STUDENTS_API_URL, ADVISORS_API_URL) {
   const days = [];
   const dayMap = new Map();
   advisors.forEach(advisor => {
-    const assigned = students.filter(s => s.Block && s.Block.Id === advisor.Id);
-    assigned.forEach((s, i) => s.order = s.Order ? parseInt(s.Order) : i + 1);
-    const maxOrder = Math.max(...assigned.map(s => s.order));
-    advisor.slots = Array(maxOrder).fill(false);
-    assigned.forEach(s => advisor.slots[parseInt(s.order) - 1] = s);
+    advisor.assigned = students.filter(s => s.Order && s.Block && s.Block.Id === advisor.Id);
+    advisor.assigned.forEach(s => s.order = parseInt(s.Order));
+    advisor.assigned.sort((a, b) => a.order - b.order);
+    advisor.assigned.forEach((s, i) => {
+      if(i <= 0) return;
+      let prev = advisor.assigned[i - 1];
+      if(s.order === prev.order){
+        s.Name += ` & ${prev.Name}`;
+        prev.clash = s.clash = true;
+      }
+    });
+    const maxOrder = Math.max(...advisor.assigned.map(s => s.order), 0);
+    advisor.slots = [];
+    if(maxOrder) advisor.slots = Array(maxOrder).fill(false);
+    advisor.assigned.forEach(s => advisor.slots[parseInt(s.order) - 1] = s);
+
     advisor.label = `${advisor.Program} | ${advisor.Name}`;
     advisor.students = students.filter(s => s.Advisor && s.Advisor.Id === advisor.Id);
     advisor.date = new Date(advisor["Block Time"].replace(" ", "T"));
@@ -65,6 +76,7 @@ export async function loadData(STUDENTS_API_URL, ADVISORS_API_URL) {
 
   _advisors.value = advisors.sort((a, b) => a.label.localeCompare(b.label));
   _students.value = students.sort((a, b) => a.label.localeCompare(b.label));
+  days.forEach(d => d.advisors = d.advisors.sort((a,b) => a.date - b.date));
   days.sort((a, b) => a.date - b.date);
   _days.value = days;
   _activeDay.value = _days.value[0];
@@ -261,6 +273,7 @@ export function buildDOM() {
                       'time-slot': true,
                       'student-slot': !!student,
                       'break-slot': !student,
+                      'error-slot': !!student && student.clash,
                     },
                     div: [{
                         class: 'time',
@@ -268,10 +281,11 @@ export function buildDOM() {
                       },
                       {
                         class: 'slot-content',
-                        div: [{
+                        div: [
+                          /*{
                             class: 'slot-number',
                             text: i + 1,
-                          },
+                          },*/
                           {
                             class: 'student-name',
                             text: !!student ? student.Name : 'BREAK',
@@ -294,7 +308,7 @@ export function buildDOM() {
                             },
                           }] : []),
                         ],
-                        ondone: el => student.element = el,
+                        ondone: el => !!student && (student.element = el),
                       }
                     ],
                   })),
