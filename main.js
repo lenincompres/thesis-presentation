@@ -289,12 +289,28 @@ export function buildDOM() {
                           {
                             class: 'student-name',
                             text: !!student ? student.Name : 'BREAK',
-                          }
+                          },
+                          ...(!!student && advisor.Program === 'ITP' ? [{
+                            class: 'thesis-archive-slot',
+                            button: {
+                              class: 'thesis-archive-button',
+                              text: 'thesis archive',
+                              ariaLabel: 'View thesis archive',
+                              onclick: e => {
+                                e.stopPropagation();
+                                visitProject(student);
+                              },
+                              img: {
+                                src: 'assets/diagonal-arrow.svg',
+                                class: 'thesis-archive-arrow',
+                                alt: 'diagonal arrow'
+                              }
+                            },
+                          }] : []),
                         ],
                         ondone: el => !!student && (student.element = el),
                       }
                     ],
-                    onclick: () => visitProject(student),
                   })),
                 }
               })),
