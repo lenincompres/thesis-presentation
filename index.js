@@ -1,7 +1,7 @@
 import { buildDOM, loadData } from "./main.js";
 
-const STUDENTS_API_URL = 'students.json';
-const ADVISORS_API_URL = 'advisors.json';
+const STUDENTS_API_URL = 'https://itp.nyu.edu/NocoAPI/students.json';
+const ADVISORS_API_URL = 'https://itp.nyu.edu/NocoAPI/advisors.json';
 
 buildDOM();
 
