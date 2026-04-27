@@ -8,6 +8,8 @@ const STUDENTS_API_URL = 'https://itp.nyu.edu/NocoAPI/?action=list-students';
 const ADVISORS_API_URL = 'https://itp.nyu.edu/NocoAPI/?action=list-advisors';
 
 async function saveJSON() {
+  console.log('Save JSON called');
+  if(!!_conflicts.value) return;
   const saveResponse = await fetch("https://itp.nyu.edu/NocoAPI/?action=save-json", {
     method: "POST",
   });
@@ -15,14 +17,18 @@ async function saveJSON() {
   location.reload();
 }
 
-/*
-fetch('data.json')
+const _lastPublished = new Binder('');
+fetch('https://itp.nyu.edu/NocoAPI/students.json')
   .then(res => {
-    console.log(res.headers.get('Last-Modified'));
-    return res.json();
-  })
-  .then(data => console.log(data));
-*/
+    const lastModified = res.headers.get('Last-Modified');
+    const nyTime = new Date(lastModified).toLocaleString('en-US', {
+      timeZone: 'America/New_York',
+      dateStyle: 'medium',
+      timeStyle: 'short'
+    });
+    _lastPublished.value = nyTime;
+  });
+
 
 /* ===============================
    BUILD DOM
@@ -51,12 +57,15 @@ document.body.set({
       },
       button: {
         filter: _conflicts.as(v => !v ? undefined : "blur(2px)"),
-        pointerEvents: _conflicts.as("none", "default"),
         fontSize: '1.2em',
         padding: "0.25em 0.5em",
-        marginTop: "0.5em",
+        marginTop: "1em",
         text: "Publish Schedule",
-        onclick: () => !_conflicts.value && saveJSON(),
+        onclick: () => saveJSON(),
+      },
+      p: {
+        text: 'Last published update: ',
+        b: _lastPublished,
       },
     },
   },
