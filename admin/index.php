@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Weekly Advisor Calendar</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
   <script src="../DOM.js"></script>
 </head>
 <body>

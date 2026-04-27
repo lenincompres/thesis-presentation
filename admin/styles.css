@@ -1,0 +1,13 @@
+
+.container {
+  max-width: fit-content !important;
+}
+
+.container>main{
+  display: flex !important;
+  font-size: 0.5em !important;
+}
+
+.schedule {
+  display: block !important;
+}

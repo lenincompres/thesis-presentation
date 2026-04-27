@@ -37,16 +37,16 @@ export async function loadData(STUDENTS_API_URL, ADVISORS_API_URL) {
     advisor.assigned.forEach(s => s.order = parseInt(s.Order));
     advisor.assigned.sort((a, b) => a.order - b.order);
     advisor.assigned.forEach((s, i) => {
-      if(i <= 0) return;
+      if (i <= 0) return;
       let prev = advisor.assigned[i - 1];
-      if(s.order === prev.order){
+      if (s.order === prev.order) {
         s.Name += ` & ${prev.Name}`;
         prev.clash = s.clash = true;
       }
     });
     const maxOrder = Math.max(...advisor.assigned.map(s => s.order), 0);
     advisor.slots = [];
-    if(maxOrder) advisor.slots = Array(maxOrder).fill(false);
+    if (maxOrder) advisor.slots = Array(maxOrder).fill(false);
     advisor.assigned.forEach(s => advisor.slots[parseInt(s.order) - 1] = s);
 
     advisor.label = `${advisor.Program} | ${advisor.Name}`;
@@ -76,7 +76,7 @@ export async function loadData(STUDENTS_API_URL, ADVISORS_API_URL) {
 
   _advisors.value = advisors.sort((a, b) => a.label.localeCompare(b.label));
   _students.value = students.sort((a, b) => a.label.localeCompare(b.label));
-  days.forEach(d => d.advisors = d.advisors.sort((a,b) => a.date - b.date));
+  days.forEach(d => d.advisors = d.advisors.sort((a, b) => a.date - b.date));
   days.sort((a, b) => a.date - b.date);
   _days.value = days;
   _activeDay.value = _days.value[0];
@@ -106,7 +106,8 @@ function visitProject(student) {
 }
 
 const _isPortrait = new Binder(false);
-function checkWindowSize(){
+
+function checkWindowSize() {
   _isPortrait.value = window.innerWidth < 0.7 * window.innerHeight;
 }
 window.addEventListener('resize', () => checkWindowSize());
@@ -133,7 +134,7 @@ export function buildDOM() {
       height: '100vh',
       width: '100vw',
       img: {
-        src: _isPortrait.as('assets/hero-banner.png','assets/hero-banner-mobile.png'),
+        src: _isPortrait.as('assets/hero-banner.png', 'assets/hero-banner-mobile.png'),
         alt: 'IMA/ITP Thesis Capstone Banner',
       },
       button: {
@@ -244,78 +245,80 @@ export function buildDOM() {
               onclick: () => _activeDay.value = day,
             }))),
           },
-          section_schedule: _days.as(days => days.map(day => ({
-            id: day.label.split(',')[0].toLowerCase(),
-            class: {
-              'visible': _activeDay.as(d => d === day),
-            },
-            role: 'tabpanel',
-            h2: day.label,
-            div_timeline: {
-              div: day.advisors.map(advisor => ({
-                class: {
-                  'schedule-section': true,
-                  'expanded': true,
-                },
-                backgroundColor: advisor.bgColor,
-                color: advisor.fgColor,
-                div: {
+          main: {
+            section_schedule: _days.as(days => days.map(day => ({
+              id: day.label.split(',')[0].toLowerCase(),
+              class: {
+                'visible': _activeDay.as(d => d === day),
+              },
+              role: 'tabpanel',
+              h2: day.label,
+              div_timeline: {
+                div: day.advisors.map(advisor => ({
+                  class: {
+                    'schedule-section': true,
+                    'expanded': true,
+                  },
                   backgroundColor: advisor.bgColor,
                   color: advisor.fgColor,
-                  class: 'section-department-tab',
-                  text: advisor.label,
-                  ondone: el => advisor.element = el,
-                },
-                section: {
-                  class: 'section-content',
-                  div: advisor.slots.map((student, i) => ({
-                    class: {
-                      'time-slot': true,
-                      'student-slot': !!student,
-                      'break-slot': !student,
-                      'error-slot': !!student && student.clash,
-                    },
-                    div: [{
-                        class: 'time',
-                        text: formatTime(advisor.date, i * 12),
+                  div: {
+                    backgroundColor: advisor.bgColor,
+                    color: advisor.fgColor,
+                    class: 'section-department-tab',
+                    text: advisor.label,
+                    ondone: el => advisor.element = el,
+                  },
+                  section: {
+                    class: 'section-content',
+                    div: advisor.slots.map((student, i) => ({
+                      class: {
+                        'time-slot': true,
+                        'student-slot': !!student,
+                        'break-slot': !student,
+                        'error-slot': !!student && student.clash,
                       },
-                      {
-                        class: 'slot-content',
-                        div: [
-                          /*{
-                            class: 'slot-number',
-                            text: i + 1,
-                          },*/
-                          {
-                            class: 'student-name',
-                            text: !!student ? student.Name : 'BREAK',
-                          },
-                          ...(!!student && advisor.Program === 'ITP' ? [{
-                            class: 'thesis-archive-slot',
-                            button: {
-                              class: 'thesis-archive-button',
-                              text: 'thesis archive',
-                              ariaLabel: 'View thesis archive',
-                              onclick: e => {
-                                e.stopPropagation();
-                                visitProject(student);
-                              },
-                              img: {
-                                src: 'assets/diagonal-arrow.svg',
-                                class: 'thesis-archive-arrow',
-                                alt: 'diagonal arrow'
-                              }
+                      div: [{
+                          class: 'time',
+                          text: formatTime(advisor.date, i * 12),
+                        },
+                        {
+                          class: 'slot-content',
+                          div: [
+                            /*{
+                              class: 'slot-number',
+                              text: i + 1,
+                            },*/
+                            {
+                              class: 'student-name',
+                              text: !!student ? student.Name : 'BREAK',
                             },
-                          }] : []),
-                        ],
-                        ondone: el => !!student && (student.element = el),
-                      }
-                    ],
-                  })),
-                }
-              })),
-            },
-          }))),
+                            ...(!!student && advisor.Program === 'ITP' ? [{
+                              class: 'thesis-archive-slot',
+                              button: {
+                                class: 'thesis-archive-button',
+                                text: 'thesis archive',
+                                ariaLabel: 'View thesis archive',
+                                onclick: e => {
+                                  e.stopPropagation();
+                                  visitProject(student);
+                                },
+                                img: {
+                                  src: 'assets/diagonal-arrow.svg',
+                                  class: 'thesis-archive-arrow',
+                                  alt: 'diagonal arrow'
+                                }
+                              },
+                            }] : []),
+                          ],
+                          ondone: el => !!student && (student.element = el),
+                        }
+                      ],
+                    })),
+                  }
+                })),
+              },
+            }))),
+          },
         }
       }]
     }
