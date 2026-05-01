@@ -42,11 +42,10 @@ document.body.set({
     position: "relative",
     h1: "Admin Page",
     aside_warnings: {
-      //display: _advisors.as(v => !v.length ? "block" : "none"),
       h2: "Warnings",
       section: {
         ul: _advisors.as(advisors => advisors.map(a => {
-          const unassignedStudents = a.students.length - a.assigned.length;
+          const unassignedStudents = a.slots.filter(s => !!s).length - a.assigned.length;
           const conflictingSlots = a.slots.filter(s => s.clash).length;
           _conflicts.value += conflictingSlots;
           return {
@@ -67,6 +66,11 @@ document.body.set({
         text: 'Last published update: ',
         b: _lastPublished,
       },
+      a: {
+        text: 'Week Schedule Google Sheet',
+        href: 'https://docs.google.com/spreadsheets/d/1pCGKLSd606XAUUSCkeEeuOmh3iuOldi0soO-WNKqPGU/edit?gid=549770974',
+        target: '_blank',
+      }
     },
   },
 });

@@ -1,13 +1,50 @@
-
 .container {
   max-width: fit-content !important;
 }
 
-.container>main{
+.container>main {
   display: flex !important;
   font-size: 0.5em !important;
 }
 
 .schedule {
   display: block !important;
+  margin: 0 0.5em;
+}
+
+img {
+  display: none;
+}
+
+.thesis-archive-slot {
+  display: none;
+}
+
+.container>menu {
+  display: none;
+}
+
+.schedule-section.expanded .section-content {
+  max-width: 26em !important;
+}
+
+.schedule-section {
+  padding: 0 !important;
+}
+
+.time {
+  width: 8em;
+}
+
+.student-slot .slot-content,
+.break-slot .slot-content {
+  padding: 1em;
+}
+
+.section-content:last-child {
+  margin-bottom: 0;
+}
+
+.section-department-tab {
+  top: -3.2em;
 }

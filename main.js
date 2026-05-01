@@ -9,6 +9,14 @@ const _days = new Binder([]);
 const _activeDay = new Binder();
 const _scheduleViewed = new Binder(false);
 const _legend = new Binder();
+const _windowWidth = new Binder(window.innerWidth);
+const _windowHeight = new Binder(window.innerHeight);
+const _showLivestream = new Binder(false);
+
+window.addEventListener('resize', () => {
+  _windowWidth.value = window.innerWidth;
+  _windowHeight.value = window.innerHeight;
+});
 
 /* ===============================
    LOAD DATA
@@ -33,21 +41,22 @@ export async function loadData(STUDENTS_API_URL, ADVISORS_API_URL) {
   const days = [];
   const dayMap = new Map();
   advisors.forEach(advisor => {
-    advisor.assigned = students.filter(s => s.Order && s.Block && s.Block.Id === advisor.Id);
-    advisor.assigned.forEach(s => s.order = parseInt(s.Order));
-    advisor.assigned.sort((a, b) => a.order - b.order);
-    advisor.assigned.forEach((s, i) => {
+    advisor.assigned = students.filter(s => s.Block && s.Block.Id === advisor.Id);
+    advisor.ordered = advisor.assigned.filter(s => !!s.Order);
+    advisor.ordered.forEach(s => s.order = parseInt(s.Order));
+    advisor.ordered.sort((a, b) => a.order - b.order);
+    advisor.ordered.forEach((s, i) => {
       if (i <= 0) return;
-      let prev = advisor.assigned[i - 1];
+      let prev = advisor.ordered[i - 1];
       if (s.order === prev.order) {
         s.Name += ` & ${prev.Name}`;
         prev.clash = s.clash = true;
       }
     });
-    const maxOrder = Math.max(...advisor.assigned.map(s => s.order), 0);
+    const maxOrder = Math.max(...advisor.ordered.map(s => s.order), 0);
     advisor.slots = [];
     if (maxOrder) advisor.slots = Array(maxOrder).fill(false);
-    advisor.assigned.forEach(s => advisor.slots[parseInt(s.order) - 1] = s);
+    advisor.ordered.forEach(s => advisor.slots[parseInt(s.order) - 1] = s);
 
     advisor.label = `${advisor.Program} | ${advisor.Name}`;
     advisor.students = students.filter(s => s.Advisor && s.Advisor.Id === advisor.Id);
@@ -79,7 +88,15 @@ export async function loadData(STUDENTS_API_URL, ADVISORS_API_URL) {
   days.forEach(d => d.advisors = d.advisors.sort((a, b) => a.date - b.date));
   days.sort((a, b) => a.date - b.date);
   _days.value = days;
-  _activeDay.value = _days.value[0];
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  _activeDay.value =
+    _days.value.find(d => {
+      const dDate = new Date(d.date);
+      dDate.setHours(0, 0, 0, 0);
+      return dDate >= today;
+    }) || _days.value[_days.value.length - 1];
 }
 
 function scrollToSchedule() {
@@ -131,11 +148,20 @@ export function buildDOM() {
       },
       opacity: '1',
       position: 'fixed',
+      top: 0,
       height: '100vh',
       width: '100vw',
       img: {
         src: _isPortrait.as('assets/hero-banner.png', 'assets/hero-banner-mobile.png'),
         alt: 'IMA/ITP Thesis Capstone Banner',
+      },
+      iframe: {
+        border: 'none',
+        position: "absolute",
+        top: '4em',
+        width: _windowWidth.as(v => `${v - 300}`),
+        height: _windowHeight.as(v => `${v - 250}`),
+        src: _showLivestream.as('', "livestream.html"),
       },
       button: {
         id: 'viewScheduleBtn',
@@ -149,7 +175,7 @@ export function buildDOM() {
       id: 'scheduleElement',
       class: 'layout-wrapper',
       div: [{
-        display: _scheduleViewed.as('block', 'none'),
+        display: _scheduleViewed.with(_showLivestream).as((s, l) => s || l ? 'none' : 'block'),
         class: 'left-column',
         nav: {
           class: 'site-nav',
@@ -157,6 +183,7 @@ export function buildDOM() {
               class: 'livestresn-link',
               href: '#',
               text: 'Livestream',
+              onclick: () => _showLivestream.value = !_showLivestream.value,
             },
             {
               class: 'thesis-archive-link',
@@ -199,7 +226,7 @@ export function buildDOM() {
               display: _legend.as(l => l === 'students' ? 'flex' : 'none'),
               class: 'legend',
               content: _students.as(students => ({
-                a: students.map(student => ({
+                a: students.filter(s => !!s.order).map(student => ({
                   class: 'legend-item',
                   backgroundColor: student.advisor ?
                     student.advisor.bgColor : '#ccc',
@@ -215,14 +242,17 @@ export function buildDOM() {
       }, {
         class: 'right-column',
         button: {
-          display: _scheduleViewed.as('none', 'block'),
+          display: _scheduleViewed.with(_showLivestream).as((s, l) => s || l ? 'block' : 'none'),
           id: 'menu-toggle',
           ariaLabel: 'Open Menu',
           text: '☰',
-          onclick: () => window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          }),
+          onclick: () => {
+            _showLivestream.value = false;
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          },
         },
         div_container: {
           img: {
@@ -271,6 +301,8 @@ export function buildDOM() {
                   section: {
                     class: 'section-content',
                     div: advisor.slots.map((student, i) => ({
+                      backgroundColor: student.advisor && student.advisor !== advisor ? student.advisor.bgColor : undefined,
+                      color: student.advisor && student.advisor !== advisor ? student.advisor.fgColor : undefined,
                       class: {
                         'time-slot': true,
                         'student-slot': !!student,

@@ -1,7 +1,13 @@
 /**
- * Creates DOM structures from a JS object (structure)
+ * BareDOM {DOM}
+ * The DOM, unbound.
  * @author Lenin Compres <lenincompres@gmail.com>
- * @version 1.2.20
+ * @version 1.3.1
+ *
+ * Changes:
+ * - Replaced Object.prototype.binderSet with Binder.set
+ * - Introduced State class
+ * 
  * @repository https://github.com/lenincompres/DOM.js
  */
 
@@ -9,7 +15,7 @@
  * Gets the value of an element's property.
  * @param {station} string - The style|attribute|(element)tag|innerText/innetHTML|on(event)|name of an element.
  */
- Element.prototype.get = function (station) {
+Element.prototype.get = function (station) {
   let output;
   if (!station && this.tagName.toLocaleLowerCase() === "input") output = this.value;
   else if (!station || ["content", "inner", "innerhtml", "html"].includes(station)) output = this.innerHTML;
@@ -25,16 +31,6 @@
   output = [...this.querySelectorAll(station)];
   if (output.length) return output;
 }
-
-/**
- * Sets the value of an element's property.
- * @param {station} string - The station of an element.
- * @param {be} - the values to be set, or function to modify its given the currentvalue 
- */
-Element.prototype.let = function (station, be = () => undefined, ...args) {
-  return this.set(typeof be === "function" ? be(this.get(station)) : be, station, ...args);
-}
-
 
 /**
  * Sets the DOM structure, creating elemtns to append and their properties.
@@ -108,10 +104,10 @@ Element.prototype.set = function (model, ...args) {
   }
   // deletes related transition/animation intervals
   if (IS_CONTENT && argsType.boolean === true) {
-    try{
+    try {
       while (this.firstChild) this.removeChild(parentElement.firstChild);
       this.innerHTML = "";
-    } catch(e) {}
+    } catch (e) {}
   }
   if (argsType.boolean === true && this.intervals && this.intervals[STATION]) {
     clearInterval(this.intervals[station]);
@@ -142,7 +138,7 @@ Element.prototype.set = function (model, ...args) {
         if (i === 0 && !isNaN(model.repeat)) model.repeat -= 1;
       }, model.interval, model.while, STATION, () => {
         this.set(model.loop[model.loop.length - 1], STATION);
-        if(model.callBack) model.callBack();
+        if (model.callBack) model.callBack();
       });
     }, model.delay);
     return this;
@@ -191,7 +187,7 @@ Element.prototype.set = function (model, ...args) {
   const handleProps = (fallBack = () => null) => {
     Object.entries(model).map(([key, value]) => {
       if (value instanceof Binder) {
-        if(station === "class") value = value.as();
+        if (station === "class") value = value.as();
         else return value.bind(this, key, value.as, station);
       }
       if (value && value.binders) return value.binders.forEach(binder => binder.bind(this, key, value.as, value.listener, station));
@@ -333,7 +329,7 @@ Element.prototype.set = function (model, ...args) {
     }
     let done = DOM.isStyle(STATION, this) ? this.style[STATION] = model : undefined;
     if (DOM.typify(STATION).attribute || STATION.startsWith("aria") || STATION.startsWith("data")) {
-      if(typeof this[station] === "boolean") done = model ? !this.setAttribute(station, "") : !this.removeAttribute(station);
+      if (typeof this[station] === "boolean") done = model ? !this.setAttribute(station, "") : !this.removeAttribute(station);
       else done = !this.setAttribute(DOM.unCamelize(STATION), model);
     }
     if (station === "id") DOM.addID(model, this);
@@ -348,7 +344,7 @@ Element.prototype.set = function (model, ...args) {
   elt = p5Elem ? elem.elt : elem;
   if (cls.length) elt.classList.add(...cls);
   if (id) elt.setAttribute("id", id);
-  if(argsType.boolean !== false) argsType.boolean === true ? this.prepend(elt) : this.append(elt);
+  if (argsType.boolean !== false) argsType.boolean === true ? this.prepend(elt) : this.append(elt);
   ["ready", "onready", "done", "ondone"].forEach(f => {
     if (!model[f]) return this;
     model[f](elem);
@@ -366,6 +362,23 @@ Element.prototype.set = function (model, ...args) {
   if (argsType.functions) argsType.functions.forEach(f => f(elem));
   return elem;
 };
+
+/**
+ * Sets the value of an element's property.
+ * @param {station} string - The station of an element.
+ * @param {be} - the values to be set, or function to modify its given the currentvalue 
+ */
+Element.prototype.let = function (station, be, ...args) {
+  if (be === undefined) {
+    be = station;
+    station = "section";
+    if (!!be.tag) {
+      station = be.tag;
+      delete be.tag;
+    }
+  }
+  return this.set(typeof be === "function" ? be(this.get(station)) : be, station, ...args);
+}
 
 // Adds set method to P5 elements
 
@@ -447,7 +460,7 @@ class Binder {
    */
   as(...args) {
     //if(!this.bind) return;
-    if(args.length === 0) args.push(val => val);
+    if (args.length === 0) args.push(val => val);
     if (args.length === 1) return this.bind(args[0]);
     if (typeof args[0] === "function") {
       if (args.length === 2) return this.bind(...args);
@@ -499,7 +512,7 @@ class Binder {
     let as = argsType.function ? argsType.function : val => val;
     if (values && values.length) as = this.getAs(values, as);
     else if (map && map !== target) as = this.getAs(map, as);
-    if (!target) return DOM.bind([this], as,  this.onChange(as)); // binding in a model
+    if (!target) return DOM.bind([this], as, this.onChange(as)); // binding in a model
     if (listener) this.removeListener(listener); // if in a model, removes the listener
     let bond = {
       binder: this,
@@ -561,13 +574,12 @@ class Binder {
   apply(val) {
     this.value = val;
   }
-  static set(...args) {
-    binderSet(...args);
-  }
+
   /**
    * Sets the value in the binder.
    * @param {val} - value to hold.
    */
+
   set value(val) {
     this.#value = val;
     this._bonds.forEach(bond => {
@@ -595,9 +607,87 @@ class Binder {
    * @param {as} function - logic to be applied to the value in the binder
    * @param {type} string - not sure what this is
    */
+
+  static map = {};
+
+  // Main setter
+  static set(target, name, value) {
+    // Binder.set("count", 5)
+    // Binder.set({ count: 5 })
+    // both default to Binder.map
+    if (typeof target === "string" || (typeof target === "object" && target !== null && name === undefined)) {
+      value = name;
+      name = target;
+      target = Binder.map;
+    }
+    // Binder.set(obj, { count: 5, name: "Lenin" })
+    if (typeof name === "object" && name !== null) {
+      for (const [key, val] of Object.entries(name)) {
+        Binder.set(target, key, val);
+      }
+      return target;
+    }
+    if (typeof name !== "string") {
+      throw new TypeError("Binder.set requires a property name or object map.");
+    }
+    const binderName = "_" + name;
+    const binder = new Binder(value);
+    Object.defineProperty(target, binderName, {
+      get() {
+        return binder;
+      },
+      set() {
+        console.error(
+          `Error: This (${binderName}) is a read-only binder and cannot be reassigned. Use: ${name}, or: ${binderName}.value to change its value.`
+        );
+      },
+      configurable: false,
+      enumerable: true,
+    });
+    Object.defineProperty(target, name, {
+      get() {
+        return this[binderName].value;
+      },
+      set(val) {
+        this[binderName].value = val;
+      },
+      configurable: true,
+      enumerable: true,
+    });
+    return target;
+  }
+
+  static get(name) {
+    const binderName = "_" + name;
+    if (!(binderName in Binder.map)) throw new Error(`Binder "${name}" has not been set. Use Binder.set("${name}", value) first.`);
+    return Binder.map[name];
+  }
+
+  static bind(name, ...args) {
+    const binderName = "_" + name;
+    if (!(binderName in Binder.map)) throw new Error(`Binder "${name}" has not been set. Use Binder.set("${name}", value) first.`);
+    const binder = Binder.map[binderName];
+    if (!args.length) return binder;
+    return binder.bind(...args);
+  }
+
+  static
+  let (name, value) {
+    const root = typeof window !== "undefined" ? window : globalThis;
+    if (typeof name === "object" && name !== null) return Binder.set(root, name);
+    return Binder.set(root, name, value);
+  }
+
   static with(...args) {
+    const binders = args.map(arg => {
+      if (typeof arg !== "string") return arg;
+      const binderName = "_" + arg;
+      if (!(binderName in Binder.map)) throw new Error(`Binder "${arg}" has not been set. Use Binder.set("${arg}", value) first.`);
+      return Binder.map[binderName];
+    });
     return DOM.bind(...args);
   }
+
 }
 
 /**
@@ -624,94 +714,6 @@ Element.prototype.bind = function (...args) {
 }
 
 /**
- * Creates binders and it's setters and getters in an object.
- * @param {name} string - name of the binder
- * @param {name} object - key:value pairs of binders to be created
- * @param {value} string - initial value in the binder
- */
-Object.prototype.binderSet = function (name, value) {
-  if (typeof name == 'string') {
-    const _name = '_' + name;
-    const _ = new Binder(value);
-    Object.defineProperty(this, _name, {
-      get() {
-        return _;
-      },
-      set(val) {
-        console.error(`Error: This (${_name}) is a read-only binder and cannot be reassigned. Use: ${name}, or: ${_name}.value. to change its value.`);
-      },
-      configurable: false, // Prevents deletion of the property
-      enumerable: true,
-    });
-    Object.defineProperty(this, name, {
-      get() {
-        return this[_name].value;
-      },
-      set(val) {
-        this[_name].value = val;
-      },
-    });
-    return;
-  }
-  for (const [key, value] of Object.entries(name)) {
-    this.binderSet(key, value);
-  }
-}
-
-/**
- * Creates a objects that holds several binders.
- */
-class BinderSet {
-  /**
-   * Creates a BinderSet instance
-   */
-  constructor(...args) {
-    this.binderSet(...args);
-  }
-  /**
-   * Creates a binding object inside a model to be set() applying one of multiple binders in the set. Expected to be called followed by a "as()" call: myBinderSet.with("binderName").as(func).
-   * @param {args} array - binders to consides in the binding.
-   */
-  with(...args) {
-    if (Array.isArray(args[0])) return this.with(...args[0]).as(args[1]);
-    return DOM.bind(...BinderSet.validate(args));
-  }
-  /**
-   * Binds binders in the set to an element's property.
-   * @param {binders} array - binders to bind
-   * @param {target} element - element to bind
-   * @param {station} string - station (prop) to bind
-   * @param {listeners} number - any other binders of the same prop
-   * @param {values} array - value to select based on numeric result ot the bind
-   * @param {map} object - value to select based on key result ot the bind
-   * @param {as} function - logic to be applied to the value in the binder
-   */
-  bind(...args) {
-    let argsType = DOM.typify(...args);
-    if (argsType.element) return {
-      with: (...binders) => ({
-        as: func => argsType.element.set({
-          [argsType.string]: DOM.bind(BinderSet.validate(binders), func),
-        })
-      })
-    }
-    if (args[0].target) return args[0].target.set({
-      [args[0].station]: DOM.bind(BinderSet.validate(args[0].with), args[0].as),
-    });
-    if (args[0].with) return this.with(args[0].with, args[0].as);
-    return this.with(...args);
-  }
-  /**
-   * Given a string name returnd the appropriate binder in the set.
-   * @param {args} array - binders to be returned.
-   */
-  static validate(...args) {
-    if (Array.isArray(args[0])) return BinderSet.validate(...args[0]);
-    return args.map(a => typeof a === 'string' ? this["_" + a] : a);
-  }
-}
-
-/**
  * Class for global static methods to handle the DOM
  */
 class DOM {
@@ -727,7 +729,8 @@ class DOM {
    * @param {station} station - propety to get.
    * @param {be} func - logic to be applied based on the current value of the station.
    */
-  static let (station, ...args) {
+  static
+  let (station, ...args) {
     return DOM.headTags.includes(station.toLowerCase()) ? document.head.let(station, ...args) : document.body.let(station, ...args);
   }
   /**
@@ -750,7 +753,7 @@ class DOM {
     }, true);
     // checks if the model is meant for an element
     let argsType = DOM.typify(...args);
-    if(Array.isArray(model) && !argsType.string) return DOM.set(model, 'section', ...args);
+    if (Array.isArray(model) && !argsType.string) return DOM.set(model, 'section', ...args);
     let elt = argsType.element ? argsType.element : argsType.p5Element;
     if (elt) return elt.set(model, ...args);
     // hidden models with css for a split second 
@@ -1139,7 +1142,7 @@ class DOM {
       borderCollapse: "collapse",
       borderSpacing: 0,
     },
-    h: { 
+    h: {
       fontFamily: "Georgia, serif",
       fontWeight: "bold",
       fontSize: "1em",

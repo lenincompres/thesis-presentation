@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYU ITP / IMA Thesis & Capstone Live Stream</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-54YGZP2VQT"
+    ></script>
+    <script
+      defer
+      src="https://www.itp.nyu.edu/branding/header/contentScript.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://www.itp.nyu.edu/branding/header/style.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://status.itpima.com/socket.io/socket.io.js"
+    ></script>
+    <script>
+      var socket = io.connect("https://status.itpima.com/");
+
+      socket.on("connect", function () {
+        console.log("Connected " + socket.id);
+      });
+
+      socket.on("update", function (data) {
+        console.log("update: " + data);
+        setTimeout(function () {
+          document.getElementById("t1").innerHTML = data;
+        }, 30000);
+      });
+    </script>
+    <style>
+      @font-face {
+        font-family: "Space Mono";
+        src: url("assets/fonts/space-mono-400.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Mono";
+        src: url("assets/fonts/space-mono-700.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Mono";
+        src: url("assets/fonts/space-mono-400-italic.woff2") format("woff2");
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Mono";
+        src: url("assets/fonts/space-mono-700-italic.woff2") format("woff2");
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Grotesk";
+        src: url("assets/fonts/space-grotesk-300.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Grotesk";
+        src: url("assets/fonts/space-grotesk-400.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Grotesk";
+        src: url("assets/fonts/space-grotesk-500.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Grotesk";
+        src: url("assets/fonts/space-grotesk-600.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Space Grotesk";
+        src: url("assets/fonts/space-grotesk-700.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        /* Pastel Palette */
+        --primary: #a0c4ff;
+        /* Soft Blue */
+        --primary-light: #eaf2ff;
+        /* Lighter Blue */
+        --secondary: #f1f1f1;
+        /* Light Gray */
+        --text: #2d4439;
+        /* Dark green */
+        --text-light: #507765;
+        /* Medium-dark green */
+        --break: #0009;
+        /* Soft Red */
+        --break-light: #80808040;
+        /* Lighter Red */
+        --border: #507765;
+        --white: #ffffff;
+        --bg-body: #c3bfb2;
+        /* Gray */
+        --border-radius-large: 4px;
+        --day-color: #f0f2b4;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Space Mono",
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+
+        color: var(--text);
+        background: linear-gradient(
+          to bottom,
+          #fffff3 0%,
+          #f0f2b4 20%,
+          #e3e3d7 50%
+        );
+        background-size: 600% 600%;
+        animation: gradientBG 15s ease infinite;
+        line-height: 1.5;
+        padding: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 0;
+        background-color: var(--bg-body);
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+      }
+
+      .livestreamAndChat {
+        display: flex;
+        gap: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: row;
+        height: 100%;
+      }
+
+      .video-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 0;
+        justify-content: center;
+      }
+
+      #my-video {
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      #chatContainerAndControls {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow: visible;
+      }
+
+      #chatContainer {
+        min-width: 400px;
+        min-height: 300px;
+        height: 100%;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      #toggleChatButton {
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        height: 100%;
+        font-family: "Space Mono", "monospace";
+        font-size: 1.5em;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--text);
+        background-color: rgba(255, 255, 255, 0.75);
+        border: 1px solid var(--border);
+        border-radius: var(--border-radius-large);
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      #chatFrame {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .hidden {
+        display: none;
+        transition: all 0.5s ease;
+      }
+
+      #t1-wrapper {
+        flex: 0 0 60px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 0.75rem 0;
+        border-top: 1px solid var(--border);
+        margin-top: 1rem;
+      }
+
+      #t1 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text);
+        text-align: center;
+        margin: 0;
+        padding: 0.5rem 0.5rem;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--text);
+        text-align: center;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @media (orientation: portrait) {
+        .container {
+          margin: 0 auto;
+        }
+        .livestreamAndChat {
+          flex-direction: column;
+          height: 100%;
+        }
+
+        .video-wrapper {
+          width: 100%;
+          height: auto;
+          min-height: 0;
+        }
+
+        #chatContainerAndControls {
+          width: 100%;
+          flex-direction: column;
+          flex: 1;
+        }
+
+        #chatContainer {
+          width: 100%;
+          min-width: unset;
+          height: 100%;
+          flex: 1;
+        }
+
+        #toggleChatButton {
+          writing-mode: horizontal-tb;
+          width: 100%;
+          height: auto;
+          padding: 0.75rem;
+          margin-top: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Content for livestream page will go here -->
+      <div class="livestreamAndChat">
+        <div class="video-wrapper">
+          <video
+            id="my-video"
+            controls
+            autoplay="true"
+            preload="auto"
+            poster="2026-16x9.png"
+            webkit-playsinline
+            playsinline
+          >
+            <source
+              src="https://ddap97eg6og3o.cloudfront.net/thesis-2026/smil:thesis-2026.smil/playlist.m3u8"
+              type="application/x-mpegURL"
+            />
+          </video>
+          <div id="t1-wrapper"><div id="t1"></div></div>
+        </div>
+        <div id="chatContainerAndControls">
+          <div id="chatContainer">
+            <iframe
+              id="chatFrame"
+              src="https://rocketchat.itp.io/channel/general?layout=embedded"
+            ></iframe>
+          </div>
+          <button id="toggleChatButton">Hide Chat</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("Livestream page loaded");
+      });
+
+      const toggleChatButton = document.getElementById("toggleChatButton");
+      const chatContainer = document.getElementById("chatContainer");
+
+      chatContainer.classList.add("hidden"); // hide by default
+      toggleChatButton.textContent = "Show Chat";
+
+      toggleChatButton.addEventListener("click", function () {
+        chatContainer.classList.toggle("hidden");
+
+        if (chatContainer.classList.contains("hidden")) {
+          toggleChatButton.textContent = "Show Chat";
+        } else {
+          toggleChatButton.textContent = "Hide Chat";
+        }
+      });
+    </script>
+
+    <!-- <script src="https://vjs.zencdn.net/8.20.0/video.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+    <script>
+      var video = document.getElementById("my-video");
+      var videoSrc = "https://ddap97eg6og3o.cloudfront.net/thesis-2026/smil:thesis-2026.smil/playlist.m3u8";
+      if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(video);
+      }
+      // HLS.js is not supported on platforms that do not have Media Source
+      // Extensions (MSE) enabled.
+      //
+      // When the browser has built-in HLS support (check using `canPlayType`),
+      // we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video
+      // element through the `src` property. This is using the built-in support
+      // of the plain video element, without using HLS.js.
+      else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        video.src = videoSrc;
+      }
+    </script>
+  </body>
+</html>
