@@ -108,7 +108,7 @@ body {
 
 .site-banner {
   color: var(--text);
-  padding: 0 10em;
+  padding: 0 10%;
   line-height: 0;
   position: fixed;
   top: 0;
@@ -146,7 +146,7 @@ body {
 .scroll-down-button {
   position: absolute;
   /* Position relative to the fixed banner */
-  top: 85%;
+  bottom: 4em;
   /* Position lower part of the banner */
   left: 50%;
   transform: translateX(-50%);

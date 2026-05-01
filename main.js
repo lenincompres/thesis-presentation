@@ -159,7 +159,7 @@ export function buildDOM() {
         border: 'none',
         position: "absolute",
         top: '4em',
-        width: _windowWidth.as(v => `${v - 300}`),
+        width: _windowWidth.as(v => `${v * 0.82}`),
         height: _windowHeight.as(v => `${v - 250}`),
         src: _showLivestream.as('', "livestream.html"),
       },
