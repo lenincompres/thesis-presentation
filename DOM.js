@@ -729,9 +729,8 @@ class DOM {
    * @param {station} station - propety to get.
    * @param {be} func - logic to be applied based on the current value of the station.
    */
-  static
-  let (station, ...args) {
-    return DOM.headTags.includes(station.toLowerCase()) ? document.head.let(station, ...args) : document.body.let(station, ...args);
+  static let (station, ...args) {
+    return DOM.headTags.includes(station.toLowerCase()) ? document.head.let(station, ...args, false) : document.body.let(station, ...args, false);
   }
   /**
    * Sets the value of a property and creates elements in the document head and body based on an object model. Also resets the css.
