@@ -360,6 +360,13 @@ body {
   /* Above banner, below nav */
 }
 
+@media (max-width: 574px) {
+  .container {
+    margin: 2em 0.5em;
+    padding: 0.5em;
+  }
+}
+
 h1 {
   font-size: 1.8em;
   /* Slightly smaller */
@@ -460,12 +467,23 @@ h1 {
   padding-bottom: 0.25em;
 }
 
+
 .timeline {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
   margin-top: 1.5em;
+}
+
+@media (max-width: 574px) {
+  .schedule h2{
+    margin-bottom: 0.25em;
+  }
+
+  .timeline {
+    margin-top: 0.5em;
+  }
 }
 
 .time-labels {
@@ -505,7 +523,7 @@ h1 {
   /* Align items vertically */
   border-top: 1px solid var(--bg-body);
   padding-left: 1em;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
 }
 
 .time-slot:first-child {
@@ -538,6 +556,14 @@ h1 {
   letter-spacing: 0.5px;
 }
 
+@media (max-width: 574px) {
+  .time{
+    width: 6.5em;
+    padding: 0.2rem 0.4em;
+    font-size: 0.8rem;
+  }
+}
+
 .slot-content {
   flex: 1;
   /* background-color: #fff3; */
@@ -558,6 +584,14 @@ h1 {
   height: 100%;
   min-width: 0;
   /* Allow shrinking */
+}
+
+@media (max-width: 574px) {
+  .slot-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+  }
 }
 
 .section-content:last-child {
@@ -595,7 +629,7 @@ h1 {
 .time-slot.break-slot {
   background-color: var(--bg-body);
   margin: 0 -1rem;
-  padding-left: 3rem;
+  padding-left: 2rem;
   z-index: 2;
   color: var(--text);
   font-size: 1em;
@@ -609,6 +643,12 @@ h1 {
   font-size: 1.6em;
   line-height: 0.6em;
   text-transform: uppercase;
+}
+
+@media (max-width: 574px) {
+  .break-slot .slot-content {
+    font-size: 1rem;
+  }
 }
 
 .time-slot.break-slot + .time-slot.student-slot {
@@ -625,8 +665,13 @@ h1 {
   text-overflow: ellipsis;
   /* Add ellipsis */
   font-size: 1.75em;
-  font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 574px) {
+  .student-slot .student-name {
+    font-size: 1rem;
+  }
 }
 
 .student-slot .slot-number {
@@ -657,6 +702,12 @@ h1 {
   margin-left: auto;
 }
 
+@media (max-width: 574px) {
+  .thesis-archive-slot {
+    margin-left: 0;
+  }
+}
+
 .thesis-archive-button {
   font-family: 'Space Mono', 'monospace';
   text-transform: uppercase;
@@ -667,7 +718,17 @@ h1 {
   border-radius: var(--border-radius-large);
   cursor: pointer;
   transition: all 0.3s ease;
+}
 
+@media (max-width: 574px) {
+  .thesis-archive-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .thesis-archive-button:hover {
