@@ -114,8 +114,9 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  /* height: 100vh; REMOVED */
+  /* dvh tracks mobile browser UI better than vh */
   height: 100vh;
+  height: 100dvh;
   z-index: 1;
   /* background-color: #000; CHANGED Fallback color if image fails */
   /* background-color: var(--bg-body); */
@@ -142,11 +143,32 @@ body {
   /* Contain image to show full image + background */
 }
 
+.site-banner .livestream-frame {
+  --live-top-gap: max(2rem, calc(env(safe-area-inset-top, 0px) + 2rem));
+  --live-bottom-gap: max(7rem, calc(env(safe-area-inset-bottom, 0px) + 2rem));
+  position: absolute;
+  top: var(--live-top-gap);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92vw, 1100px);
+  height: calc(100dvh - var(--live-top-gap) - var(--live-bottom-gap));
+  min-height: 220px;
+  box-sizing: border-box;
+}
+
+/* Short landscape screens need tighter vertical margins to maximize iframe height */
+@media (orientation: landscape) and (max-height: 520px) {
+  .site-banner .livestream-frame {
+    --live-top-gap: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
+    --live-bottom-gap: max(3rem, calc(env(safe-area-inset-bottom, 0px) + 2.25rem));
+  }
+}
+
 /* Style for the scroll-down button on the banner */
 .scroll-down-button {
   position: absolute;
   /* Position relative to the fixed banner */
-  bottom: 4em;
+  bottom: 2em;
   /* Position lower part of the banner */
   left: 50%;
   transform: translateX(-50%);
@@ -154,7 +176,7 @@ body {
   /* Above banner image, below nav */
   padding: 0.8rem 1.5em;
   font-family: 'Space Mono', 'monospace';
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -172,6 +194,14 @@ body {
   background-color: var(--white);
   transform: translateX(-50%) translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 849px) {
+  .scroll-down-button {
+    bottom: 1em;
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .site-nav {
@@ -475,6 +505,7 @@ h1 {
   /* Align items vertically */
   border-top: 1px solid var(--bg-body);
   padding-left: 1em;
+  margin: 0 1rem;
 }
 
 .time-slot:first-child {
@@ -563,7 +594,14 @@ h1 {
 
 .time-slot.break-slot {
   background-color: var(--bg-body);
+  margin: 0 -1rem;
+  padding-left: 3rem;
+  z-index: 2;
   color: var(--text);
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .break-slot .slot-content {
@@ -571,6 +609,10 @@ h1 {
   font-size: 1.6em;
   line-height: 0.6em;
   text-transform: uppercase;
+}
+
+.time-slot.break-slot + .time-slot.student-slot {
+  border-top: none;
 }
 
 .student-slot .student-name {
@@ -691,7 +733,7 @@ h1 {
   /* Folder-like corners: Rounded top, square bottom */
   border-radius: 4px;
   /* Rounded all corners */
-  padding: 0 1rem 1rem 1em;
+  padding-bottom: 1em;
   transition: background-color 0.3s ease;
   position: relative;
   /* Adjust padding-top if needed based on tab */

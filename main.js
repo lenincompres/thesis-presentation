@@ -9,14 +9,7 @@ const _days = new Binder([]);
 const _activeDay = new Binder();
 const _scheduleViewed = new Binder(false);
 const _legend = new Binder();
-const _windowWidth = new Binder(window.innerWidth);
-const _windowHeight = new Binder(window.innerHeight);
 const _showLivestream = new Binder(false);
-
-window.addEventListener('resize', () => {
-  _windowWidth.value = window.innerWidth;
-  _windowHeight.value = window.innerHeight;
-});
 
 /* ===============================
    LOAD DATA
@@ -156,11 +149,10 @@ export function buildDOM() {
         alt: 'IMA/ITP Thesis Capstone Banner',
       },
       iframe: {
+        class: 'livestream-frame',
         border: 'none',
-        position: "absolute",
-        top: '4em',
-        width: _windowWidth.as(v => `${v * 0.82}`),
-        height: _windowHeight.as(v => `${v - 250}`),
+        display: _showLivestream.as('none', 'block'),
+        zIndex: 1,
         src: _showLivestream.as('', "livestream.html"),
       },
       button: {

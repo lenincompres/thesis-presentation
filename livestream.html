@@ -148,6 +148,10 @@
         box-sizing: border-box;
       }
 
+      html {
+        height: 100%;
+      }
+
       body {
         font-family:
           "Space Mono",
@@ -167,15 +171,19 @@
         animation: gradientBG 15s ease infinite;
         line-height: 1.5;
         padding: 0;
-        min-width: 100%;
+        width: 100%;
+        min-height: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
       }
 
-      .container {
-        width: 100vw;
-        height: 100vh;
+      .livestream-container {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        flex: 1;
         margin: 0 auto;
         padding: 0;
         background-color: var(--bg-body);
@@ -183,17 +191,19 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         display: flex;
         flex-direction: column;
-        overflow: auto; /* instead of scroll */
+        overflow: auto;
       }
 
       .livestreamAndChat {
         display: flex;
         gap: 1rem;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: stretch;
         flex-direction: row;
         height: 100%;
+        width: 100%;
+        min-width: 0;
       }
 
       .video-wrapper {
@@ -201,7 +211,10 @@
         flex-direction: column;
         align-items: center;
         min-width: 0;
-        justify-content: center;
+        justify-content: start;
+        flex: 1 1 auto;
+        width: auto;
+        padding: 1rem;
       }
 
       #my-video {
@@ -216,13 +229,23 @@
         display: flex;
         flex-direction: row;
         overflow: visible;
+        min-width: 0;
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+
+      @media (max-width: 574px){
+        #chatContainerAndControls {
+          max-height: 50%;
+        }
       }
 
       #chatContainer {
-        min-width: 400px;
+        width: min(32vw, 420px);
+        min-width: 220px;
         min-height: 300px;
         height: 100%;
-        flex: 1;
+        flex: 1 1 auto;
         overflow: hidden;
       }
 
@@ -231,22 +254,20 @@
         text-orientation: sideways;
         height: 100%;
         font-family: "Space Mono", "monospace";
-        font-size: 1.5em;
+        font-size: 1rem;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 1px;
         color: var(--text);
         background-color: rgba(255, 255, 255, 0.75);
-        border: 1px solid var(--border);
         border-radius: var(--border-radius-large);
         border: none;
         padding: 0.5rem 1rem;
         cursor: pointer;
-        font-size: 1rem;
-        font-weight: 600;
         transition: background-color 0.2s ease;
         white-space: nowrap;
         flex-shrink: 0;
+        margin: 1rem 0;
       }
 
       #chatFrame {
@@ -333,11 +354,12 @@
           width: 100%;
           flex-direction: column;
           flex: 1;
+          min-width: 0;
         }
 
         #chatContainer {
           width: 100%;
-          min-width: unset;
+          min-width: 0;
           height: 100%;
           flex: 1;
         }
@@ -353,7 +375,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="livestream-container">
       <!-- Content for livestream page will go here -->
       <div class="livestreamAndChat">
         <div class="video-wrapper">
