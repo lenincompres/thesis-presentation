@@ -157,7 +157,7 @@ body {
 }
 
 /* Short landscape screens need tighter vertical margins to maximize iframe height */
-@media (orientation: landscape) and (max-height: 520px) {
+@media (orientation: landscape){
   .site-banner .livestream-frame {
     --live-top-gap: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
     --live-bottom-gap: max(3rem, calc(env(safe-area-inset-bottom, 0px) + 2.25rem));
@@ -362,7 +362,8 @@ body {
 
 @media (max-width: 574px) {
   .container {
-    margin: 2em 0.5em;
+    margin-left:0.5em;
+    margin-right:0.5em;
     padding: 0.5em;
   }
 }
@@ -476,15 +477,7 @@ h1 {
   margin-top: 1.5em;
 }
 
-@media (max-width: 574px) {
-  .schedule h2{
-    margin-bottom: 0.25em;
-  }
 
-  .timeline {
-    margin-top: 0.5em;
-  }
-}
 
 .time-labels {
   display: flex;
